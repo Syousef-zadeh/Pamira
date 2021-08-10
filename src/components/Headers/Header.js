@@ -9,14 +9,15 @@ const Header = (props) => {
   const logoImg = logo;
 
   return (
-    <div>
-      <TopHeader />
-      <div className={styles.header}>
-        <img className={styles.ImgLogo} src={logoImg} alt="Pamira-logo" />
-        <NavBar />
-      </div>
-      
-    </div>
+      <header>
+        <TopHeader />
+        <div className={styles.header}>
+          <img className={styles.ImgLogo} src={logoImg} alt="Pamira-logo" />
+          <div>
+            <NavBar />
+          </div>
+        </div>
+      </header>
   );
 };
 export default Header;
