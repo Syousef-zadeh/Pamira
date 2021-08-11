@@ -1,3 +1,33 @@
-.nav{
-    color: black;
+.nav{width: 100%;
+    float: right;
+    
 }
+.nav ul{
+    color: black;
+    height: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    padding: 0 5%;
+    margin: 0;
+
+}
+
+.nav li{
+    margin: 0 1rem;
+    width: 5rem;
+
+}
+
+.nav a {
+    color: rgb(15, 14, 14);
+    text-decoration: none;
+  }
+  
+  .nav a:hover,
+  .nav a:active,
+  .nav a.active {
+    color: #145b64;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid #145b64;
+  }

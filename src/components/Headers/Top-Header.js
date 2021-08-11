@@ -1,25 +1,25 @@
 import React from "react";
 import AppointmentButton from "./AppointmentButton";
 import { BiPhoneCall } from "react-icons/bi";
-import { ImLocation2 } from "react-icons/im";
+import { AiFillInstagram } from "react-icons/ai";
 
 import styles from "./Top-Header.module.css";
 
 const TopHeader = (props) => {
   return (
-    <div>
-      <div className={styles.topHeader}>
+    <div className={styles.topHeader}>
+      <div className={styles.info}>
         <h4>
-          {" "}
           <BiPhoneCall /> 021-33307551
         </h4>
-          <h4 className={styles.address}>
-            {" "}
-            <ImLocation2 /> Tehran - 17 shahrivar
-          </h4>
-          <AppointmentButton />
+        <h4 className={styles.address}>
+          <AiFillInstagram /> Pamira.clinic
+        </h4>
       </div>
-     
+
+      <div className={styles.btn}>
+        <AppointmentButton />
+      </div>
     </div>
   );
 };

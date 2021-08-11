@@ -1,19 +1,19 @@
 .button{
-    position: fixed;
+    /* position: fixed; */
+    display: flex;
     cursor: pointer;
     font: inherit;
     background-color: #ffffff;
     color: rgb(1, 24, 22);
     padding: 0.65rem 2rem;
-    display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     border-radius: 25px;
     font-weight: bold;
-    margin-left: 25cm;
-    margin-bottom: 8px;
+    /* margin-left: 25cm; */
+    margin-bottom: auto;
 }
 .button:hover,
 .button:active {
-  background-color: #dcdaff;
+  background-color: #c7f1f7;
   color:rgb(2, 24, 22);
 }
