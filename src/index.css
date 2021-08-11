@@ -3,9 +3,7 @@
 * {
   box-sizing: border-box;
 }
-/* header{
-  padding-bottom: 3cm;
-} */
+
 html {
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -14,4 +12,8 @@ body {
   margin: 0;
   background-color: #cccccc;
 }
+
+/* .d-block{
+  height: 580px;
+} */
 
