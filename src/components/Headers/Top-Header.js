@@ -9,12 +9,12 @@ const TopHeader = (props) => {
   return (
     <div className={styles.topHeader}>
       <div className={styles.info}>
-        <h4>
+        <h5>
           <BiPhoneCall /> 021-33307551
-        </h4>
-        <h4 className={styles.address}>
+        </h5>
+        <h5 className={styles.address}>
           <AiFillInstagram /> Pamira.clinic
-        </h4>
+        </h5>
       </div>
 
       <div className={styles.btn}>
