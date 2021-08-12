@@ -1,16 +1,12 @@
 .button{
-    /* position: fixed; */
     display: flex;
     cursor: pointer;
     font: inherit;
     background-color: #ffffff;
     color: rgb(1, 24, 22);
-    padding: 0.65rem 2rem;
-    /* justify-content: space-around; */
+    padding: 1.5% 1%;
     border-radius: 25px;
     font-weight: bold;
-    /* margin-left: 25cm; */
-    margin-bottom: auto;
 }
 .button:hover,
 .button:active {
