@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
-import logo from "../../assets/pamira.png";
+import logo from "../../../assets/pamira.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = (props) => {
@@ -10,12 +10,8 @@ const NavBar = (props) => {
 
   return (
     <div className={styles.nav}>
-      <div className={styles.toggleButton}>
-      <GiHamburgerMenu  />
-      </div>
+      <img className={styles.ImgLogo} src={logoImg} alt="Pamira-logo" />
       <nav className={styles.navbar}>
-        <img className={styles.ImgLogo} src={logoImg} alt="Pamira-logo" />
-
         <ul className={styles.desktopNavbar}>
           <li>
             <Link to="/">Home</Link>
@@ -34,6 +30,9 @@ const NavBar = (props) => {
           </li>
         </ul>
       </nav>
+      <div className={styles.toggleButton}>
+        <GiHamburgerMenu />
+      </div>
     </div>
   );
 };

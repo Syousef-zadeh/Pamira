@@ -1,10 +1,12 @@
-
 .nav {
+  display: grid;
+  grid-template-columns: 30% 70%;
   width: 100%;
-  float: right;
-  padding: auto;
 }
-
+.navbar {
+  display: grid;
+  width: 100%;
+}
 .nav ul {
   color: black;
   list-style: none;
@@ -15,7 +17,6 @@
   margin-top: 1rem;
   grid-column-start: none;
 }
-
 .nav li {
   width: 5rem;
 }
@@ -23,7 +24,6 @@
   color: rgb(15, 14, 14);
   text-decoration: none;
 }
-
 .nav a:hover,
 .nav a:active,
 .nav a.active {
@@ -31,25 +31,14 @@
   padding-bottom: 0.25rem;
   border-bottom: 4px solid #145b64;
 }
-
 .ImgLogo {
   height: 110px;
   width: 110px;
   padding: 1rem;
 }
-.navbar {
-  /* top: 0;
-    position: sticky;
-     */
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-}
-
 .toggleButton {
-  position: absolute;
   color: black;
   display: none;
-
 }
 .toggleButton .bar {
   height: 3px;
@@ -58,13 +47,17 @@
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .toggleButton {
-    display: flex;
+    display: grid;
     justify-self: end;
+    align-self: center;
   }
-  .nav li{
-    display: none; 
+  svg {
+    width: 2rem;
+    height: 2rem;
   }
-
+  .navbar {
+    display: none;
+  }
 }
