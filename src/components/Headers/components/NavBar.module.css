@@ -1,0 +1,64 @@
+.nav {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+}
+.navbar {
+  display: grid;
+  width: 100%;
+}
+.nav ul {
+  color: black;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  grid-column-start: none;
+}
+.nav li {
+  width: 5rem;
+}
+.nav a {
+  color: rgb(15, 14, 14);
+  text-decoration: none;
+}
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  color: rgb(12, 11, 11);
+  padding-bottom: 0.25rem;
+  font-weight: bold;
+  border-bottom: 4px solid rgb(15, 14, 14);
+}
+.ImgLogo {
+  height: 110px;
+  width: 110px;
+  padding: 1rem;
+}
+.toggleButton {
+  color: black;
+  display: none;
+}
+.toggleButton .bar {
+  height: 3px;
+  width: 50px;
+  background-color: rgb(10, 10, 10);
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+  .toggleButton {
+    display: grid;
+    justify-self: end;
+    align-self: center;
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .navbar {
+    display: none;
+  }
+}

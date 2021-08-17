@@ -1,0 +1,16 @@
+.button{
+    display: flex;
+    cursor: pointer;
+    font: inherit;
+    background-color: #ffffff;
+    color: rgb(1, 24, 22);
+    padding: 1.5% 1%;
+    border-radius: 25px;
+    border-color: white;
+    font-weight: bold;
+}
+.button:hover,
+.button:active {
+  background-color: rgb(10, 10, 10);
+  color:rgb(248, 246, 108);
+}
