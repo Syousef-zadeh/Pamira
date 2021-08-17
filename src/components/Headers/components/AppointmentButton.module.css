@@ -4,10 +4,11 @@
     font: inherit;
     background-color: #ffffff;
     color: rgb(1, 24, 22);
-    padding: 1.5% 1%;
+    padding: .75% 1%;
     border-radius: 25px;
     border-color: white;
     font-weight: bold;
+    align-self: center;
 }
 .button:hover,
 .button:active {

@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = (props) => {
   const logoImg = logo;
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
   return (
     <div className={styles.nav}>
@@ -31,7 +31,28 @@ const NavBar = (props) => {
         </ul>
       </nav>
       <div className={styles.toggleButton}>
-        <GiHamburgerMenu />
+        <GiHamburgerMenu onClick={()=> setShowNavbar(!showNavbar)}/>
+        {showNavbar && 
+        <nav>
+        <ul className={styles.desktopNavbar}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Services</Link>
+          </li>
+          <li>
+            <Link to="/">Gallery</Link>
+          </li>
+          <li>
+            <Link to="/">About</Link>
+          </li>
+          <li>
+            <Link to="/Contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+        }
       </div>
     </div>
   );
