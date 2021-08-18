@@ -2,16 +2,16 @@
   display: grid;
   grid-template-columns: 30% 70%;
   width: 100%;
+  padding: 0 10%;
 }
 .navbar {
   display: grid;
   width: 100%;
 }
-
-.desktopNavbar{
+.nav ul {
   color: black;
-  display: grid;
   list-style: none;
+  display: grid;
   grid-template-columns: repeat(5, auto);
   align-items: center;
   text-align: center;
@@ -42,6 +42,12 @@
   color: black;
   display: none;
 }
+.toggleButton .bar {
+  height: 3px;
+  width: 50px;
+  background-color: rgb(10, 10, 10);
+  border-radius: 10px;
+}
 
 @media only screen and (max-width: 650px) {
   .toggleButton {
@@ -59,13 +65,10 @@
   }
   .navbar {
     display: none;
-  }
-  .mobileNav{
-    display: grid;
-    list-style: none;
 
   }
-  .desktopNavbar{
-    display: none;
+  .expandNav{
+    display: flex;
+    justify-self: end;
   }
 }
