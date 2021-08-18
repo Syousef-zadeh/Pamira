@@ -7,10 +7,11 @@
   display: grid;
   width: 100%;
 }
-.nav ul {
+
+.desktopNavbar{
   color: black;
-  list-style: none;
   display: grid;
+  list-style: none;
   grid-template-columns: repeat(5, auto);
   align-items: center;
   text-align: center;
@@ -41,12 +42,6 @@
   color: black;
   display: none;
 }
-.toggleButton .bar {
-  height: 3px;
-  width: 50px;
-  background-color: rgb(10, 10, 10);
-  border-radius: 10px;
-}
 
 @media only screen and (max-width: 650px) {
   .toggleButton {
@@ -54,11 +49,23 @@
     justify-self: end;
     align-self: center;
   }
-  svg {
+  svg{
     width: 2rem;
     height: 2rem;
   }
+  .svgBtn {
+    display: flex;
+    justify-self: end;
+  }
   .navbar {
+    display: none;
+  }
+  .mobileNav{
+    display: grid;
+    list-style: none;
+
+  }
+  .desktopNavbar{
     display: none;
   }
 }

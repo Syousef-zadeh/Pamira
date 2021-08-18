@@ -30,29 +30,32 @@ const NavBar = (props) => {
           </li>
         </ul>
       </nav>
+      
       <div className={styles.toggleButton}>
-        <GiHamburgerMenu onClick={()=> setShowNavbar(!showNavbar)}/>
-        {showNavbar && 
-        <nav>
-        <ul className={styles.desktopNavbar}>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">Services</Link>
-          </li>
-          <li>
-            <Link to="/">Gallery</Link>
-          </li>
-          <li>
-            <Link to="/">About</Link>
-          </li>
-          <li>
-            <Link to="/Contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-        }
+        <div className={styles.svgBtn}>
+          <GiHamburgerMenu onClick={() => setShowNavbar(!showNavbar)} />
+        </div>
+        {!showNavbar && (
+          <nav>
+            <ul className={showNavbar ? styles.desktopNavbar : styles.mobileNav}>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Services</Link>
+              </li>
+              <li>
+                <Link to="/">Gallery</Link>
+              </li>
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/Contact">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
     </div>
   );
