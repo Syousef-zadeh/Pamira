@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../UI/Card";
+import Card from "../UI/services/Card";
 import styles from "./Services.module.css";
 import RowServices from "./components/RowServices";
 
