@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+  }
+.imgCard {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 2% 8%;
+  gap: .5rem;
+}
+
+.title{
+    width: 100%;
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+}
+
+/* @media only screen and(max-width:850px) {
+  .imgCard{
+
+  }
+} */
