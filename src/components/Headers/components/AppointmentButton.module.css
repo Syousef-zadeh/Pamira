@@ -1,15 +1,16 @@
 .button{
     display: flex;
     cursor: pointer;
-    font: inherit;
     background-color: #ffffff;
     color: rgb(1, 24, 22);
-    padding: 1.5% 1%;
+    padding: 1% 1%;
     border-radius: 25px;
+    border-color: white;
     font-weight: bold;
+    align-self: center;
 }
 .button:hover,
 .button:active {
-  background-color: #c7f1f7;
-  color:rgb(2, 24, 22);
+  background-color: rgb(34, 34, 34);
+  color:white;
 }

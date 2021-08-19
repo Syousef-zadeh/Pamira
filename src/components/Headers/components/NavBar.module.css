@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 30% 70%;
   width: 100%;
+  padding: 0 10%;
 }
 .navbar {
   display: grid;
@@ -27,9 +28,10 @@
 .nav a:hover,
 .nav a:active,
 .nav a.active {
-  color: #145b64;
+  color: rgb(12, 11, 11);
   padding-bottom: 0.25rem;
-  border-bottom: 4px solid #145b64;
+  font-weight: bold;
+  border-bottom: 4px solid rgb(15, 14, 14);
 }
 .ImgLogo {
   height: 110px;
@@ -53,11 +55,20 @@
     justify-self: end;
     align-self: center;
   }
-  svg {
+  svg{
     width: 2rem;
     height: 2rem;
   }
+  .svgBtn {
+    display: flex;
+    justify-self: end;
+  }
   .navbar {
     display: none;
+
+  }
+  .expandNav{
+    display: flex;
+    justify-self: end;
   }
 }
