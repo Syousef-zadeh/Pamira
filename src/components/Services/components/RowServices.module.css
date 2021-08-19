@@ -1,10 +1,10 @@
 .row-services{
-    margin:1% 20%;
+    /* margin:1% 20%; */
     display: grid;
     grid-template-columns: repeat(4,auto);
     /* width: 55%; */
     justify-content: center;
-
+    gap: 1.5rem;
     
 
 }

@@ -7,7 +7,7 @@ const ServicesCard = (props) => {
       <div className={styles['body-serviceCard']}>
         <img className={styles['img-card']} src={props.img} alt="" />
 
-        <h7>{props.title}</h7>
+        <h6 className={styles['text-card']}>{props.title}</h6>
       </div>
       <div>
         <button className={styles.btn}>More Details</button>

@@ -2,10 +2,10 @@ import React from "react";
 import ServicesCard from "../../UI/ServicesCard";
 import styles from "./RowServices.module.css";
 
-import imgMeso from '../../../assets/row-service/mesotrherapy.jpeg';
-import imgMicro from '../../../assets/row-service/micro-dermy.jpeg';
-import imgLaser from '../../../assets/row-service/laser.jpeg';
-import imgBeauty from '../../../assets/row-service/beauty.jpeg';
+import imgMeso from '../../../assets/row-service/mesotrherapy.png';
+import imgMicro from '../../../assets/row-service/micro-dermi.png';
+import imgLaser from '../../../assets/row-service/laser.png';
+import imgBeauty from '../../../assets/row-service/beauty.png';
 
 
 const RowServices = (props) => {

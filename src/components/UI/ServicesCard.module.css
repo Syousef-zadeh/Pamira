@@ -6,9 +6,8 @@
     justify-content: space-between;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 1rem;
     background-color: white;
-    margin: 8% 3%;
     height: 100%;
     text-align: center;
     transition: transform 200ms ease-in;
@@ -25,12 +24,17 @@
 
 .serviceCard:hover{
     transform: translateY(-2rem);
+    background-color: aliceblue;
 }
 
 .btn{
     font-weight: bold;
     border: 2px solid;
     background: transparent;
-    color:  rgb(29, 21, 21);
+    color:  #283b42;
     border-radius: 10px;
+}
+
+.text-card{
+    padding: 1rem 0;
 }
