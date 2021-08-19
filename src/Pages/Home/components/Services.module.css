@@ -1,0 +1,13 @@
+.imgCard {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 2% 8%;
+  gap: .5rem;
+}
+
+
+@media only screen and(max-width:850px) {
+  .imgCard{
+
+  }
+}

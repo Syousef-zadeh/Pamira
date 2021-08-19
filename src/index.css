@@ -6,6 +6,7 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
+
 }
 
 body {
@@ -13,3 +14,9 @@ body {
   background-color: #cccccc;
 }
 
+@media only screen and (max-width: 750px) {
+  .carousel-caption{
+      display: none;
+  }
+
+}
