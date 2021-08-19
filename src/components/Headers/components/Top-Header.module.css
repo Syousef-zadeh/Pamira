@@ -3,7 +3,7 @@
 }
 .topHeader {
   padding: 0.25% 10%;
-  background-color: rgb(34, 34, 34);
+  background-color: #00142f;
   color: white;
   display: grid;
   grid-template-columns: repeat(2, auto);

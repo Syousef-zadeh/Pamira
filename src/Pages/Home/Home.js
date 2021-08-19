@@ -6,13 +6,13 @@ import st from "./Home.module.css";
 import img1 from "../../assets/skincare3.jpg";
 import img2 from "../../assets/massage.jpg";
 import img3 from "../../assets/skincare.jpg";
-import Services from "./components/Services";
+import Services from "../../components/Services/Services";
+
 
 const Home = () => {
   return (
     <div>
       <div>
-
       <Carousel variant="dark" className={st.homeCarousel}>
         <Carousel.Item>
           <img className="d-block w-100" src={img2} alt="First slide" />
