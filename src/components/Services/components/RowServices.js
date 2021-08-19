@@ -1,5 +1,5 @@
 import React from "react";
-import ServicesCard from "../../../components/UI/ServicesCard";
+import ServicesCard from "../../UI/ServicesCard";
 import styles from "./RowServices.module.css";
 
 import imgMeso from '../../../assets/row-service/mesotrherapy.jpeg';

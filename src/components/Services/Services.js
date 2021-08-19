@@ -1,11 +1,11 @@
 import React from "react";
-import Card from "../../../components/UI/Card";
+import Card from "../UI/Card";
 import styles from "./Services.module.css";
-import ServicesCard from "../../../components/UI/ServicesCard";
-import RowServices from "./RowServices";
-import img1 from "../../../assets/botox.jpg";
-import img2 from "../../../assets/Laser.jpeg";
-import img3 from "../../../assets/filler.jpg";
+import RowServices from "./components/RowServices";
+
+import img1 from "../../assets/botox.jpg";
+import img2 from "../../assets/Laser.jpeg";
+import img3 from "../../assets/filler.jpg";
 
 const Services = (props) => {
   return (
