@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../UI/Card";
+import Card from "../UI/services/Card";
 import styles from "./Services.module.css";
 import RowServices from "./components/RowServices";
 
@@ -26,7 +26,7 @@ const Services = (props) => {
         <Card
           img={img3}
           title="Filler"
-          description="Injectable filler (injectable cosmetic filler, injectable facial filler) is a soft tissue filler injected into the skin at different depths to help fill in facial wrinkles, provide facial volume, and augment facial features: restoring a smoother appearance."
+          description="Injectable filler is a soft tissue filler injected into the skin at different depths to help fill in facial wrinkles, provide facial volume, and augment facial features: restoring a smoother appearance."
         />
       </div>
     </div>

@@ -1,10 +1,15 @@
 .row-services{
-    /* margin:1% 20%; */
     display: grid;
     grid-template-columns: repeat(4,auto);
-    /* width: 55%; */
     justify-content: center;
     gap: 1.5rem;
-    
-
 }
+
+@media only screen and (max-width: 650px) {
+    .row-services{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      row-gap: 2rem;
+      padding-bottom: 3rem;
+    }
+  }
