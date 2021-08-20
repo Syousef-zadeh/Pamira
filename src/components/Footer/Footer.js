@@ -10,9 +10,10 @@ const Footer = () => {
   return (
     <footer>
       <Box
-        px={{ xs: 3, sm: 10 }}
-        py={{ xs: 5, sm: 10 }}
+        px={{ xs: 8, sm: 15 }}
+        py={{ xs: 8, sm: 10 }}
         pb={{xs:0, sm: 1}}
+        marginTop={{xs:8, sm:8}}
         bgcolor="#00142f"
         color="#adbed2"
       >
