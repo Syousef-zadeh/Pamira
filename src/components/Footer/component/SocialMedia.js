@@ -11,17 +11,17 @@ const SocialMedia = () => {
       <div className={styles.media}>
         <ul>
           <li>
-            <Link>
+            <Link className={styles.link}>
               <ImYoutube />
             </Link>
           </li>
           <li>
-            <Link>
+            <Link className={styles.link}>
               <AiOutlineWhatsApp />
             </Link>
           </li>
           <li>
-            <Link>
+            <Link className={styles.link}>
               <AiFillInstagram />
             </Link>
           </li>
