@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./SocialMedia.module.css";
 
-import { ImYoutube2 } from "react-icons/im";
+import { ImYoutube } from "react-icons/im";
 import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 
 const SocialMedia = () => {
   return (
     <div>
-      <div>
-        <ImYoutube2 />
-        <AiFillInstagram />
+      <div className={styles.media}>
+        <ImYoutube />
         <AiOutlineWhatsApp />
+        <AiFillInstagram />
       </div>
     </div>
   );

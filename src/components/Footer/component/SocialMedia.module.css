@@ -1,0 +1,5 @@
+.media{
+    display: flex;
+    gap: 8px;
+    padding: 1rem 0;
+}

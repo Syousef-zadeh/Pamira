@@ -14,6 +14,12 @@ body {
   background-color: #cccccc;
 }
 
+.MuiLink-underlineHover:hover{
+  cursor: pointer !important;
+  color: #c2e3f4;
+  background-color:#3a3f425b;
+}
+
 @media only screen and (max-width: 750px) {
   .carousel-caption{
       display: none;
