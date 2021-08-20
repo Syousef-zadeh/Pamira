@@ -1,5 +1,38 @@
 .media{
-    display: flex;
-    gap: 8px;
     padding: 1rem 0;
+   
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 0 ;
+    /* grid-template-columns: repeat(3, auto); */
+    list-style: none;
+    
+}
+li{
+    border: 2px solid rgba(64, 66, 90, 0.473);
+    border-radius: 70%;
+    padding: 4px;
+    align-items: center;
+}
+a{
+    color: aliceblue;
+    
+}
+
+svg{
+    height: 1.25rem;
+    width: 1.25rem;
+
+}
+li:hover{
+    color: red;
+    border: 2px solid red;
+    background-color: rgba(219, 39, 39, 0.897);
+}
+
+a:hover{
+    color: aliceblue;
 }
