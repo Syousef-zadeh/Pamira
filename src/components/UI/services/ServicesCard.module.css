@@ -28,18 +28,12 @@
     transform: translateY(-2rem);
     background-color: aliceblue;
 }
-.serviceCard:hover .btn{
+.serviceCard:hover Button{
     background-color: #283b42;
     color: white;
 }
 
-.btn{
-    font-weight: bold;
-    border: 2px solid;
-    background: transparent;
-    color:  #283b42;
-    border-radius: 10px;
-}
+
 
 .text-card{
     padding: 1rem 0;

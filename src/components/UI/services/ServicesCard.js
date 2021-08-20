@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ServicesCard.module.css";
+import Button from "../Button/button"
 
 const ServicesCard = (props) => {
   return (
@@ -10,7 +11,7 @@ const ServicesCard = (props) => {
         <h6 className={styles['text-card']}>{props.title}</h6>
       </div>
       <div>
-        <button className={styles.btn}>More Details</button>
+        <Button className={styles.button}>More Details</Button>
       </div>
     </div>
   );

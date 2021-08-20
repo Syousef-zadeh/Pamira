@@ -1,3 +1,4 @@
+import Button from "../Button/button";
 import React from "react";
 import styles from "./Card.module.css";
 
@@ -9,8 +10,8 @@ const Card = (props) => {
         <h2 className={styles["card__title"]}>{props.title}</h2>
         <p className={styles["card__description"]}>{props.description}</p>
       </div>
-      <div>
-        <button className={styles.btn}>View Details</button>
+      <div >
+        <Button>View Details</Button>
       </div>
     </div>
   );
