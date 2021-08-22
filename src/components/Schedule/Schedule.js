@@ -7,7 +7,7 @@ const Schedule = () => {
     return (
         <Box>
             <div>
-                <img src={imgSchedule} alt="schedule-image" />
+                <img src={imgSchedule} alt="schedule" />
             </div>
         </Box>
     )
