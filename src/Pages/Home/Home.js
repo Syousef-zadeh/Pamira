@@ -7,6 +7,7 @@ import img1 from "../../assets/skincare3.jpg";
 import img2 from "../../assets/massage.jpg";
 import img3 from "../../assets/skincare.jpg";
 import Services from "../../components/Services/Services";
+import Schedule from "../../components/Schedule/Schedule";
 
 
 const Home = () => {
@@ -40,6 +41,7 @@ const Home = () => {
       </Carousel>
       </div>
       <Services />
+      <Schedule />
     </div>
   );
 };
