@@ -11,7 +11,7 @@ const Card = (props) => {
         <p className={styles["card__description"]}>{props.description}</p>
       </div>
       <div >
-        <Button>View Details</Button>
+        <Button style={{padding:".5rem"}}>View Details</Button>
       </div>
     </div>
   );
