@@ -78,18 +78,26 @@ const Footer = () => {
                   register
                 </Link>
               </Box>
-              <Box style={{display:"flex", flexDirection:"column"}}>
-                <span style={{paddingTop: "16px"}}>Address: 17 shahrivar Av. Tehran</span>
+              <Box style={{ display: "flex", flexDirection: "column" }}>
+                <span style={{ paddingTop: "16px" }}>
+                  Address: 17 shahrivar Av. Tehran
+                </span>
                 <span>021-33345247</span>
 
                 <SocialMedia />
               </Box>
             </Grid>
           </Grid>
-        <Box textAlign="center" pt={{ xs: 8, sm: 10 }} pb={{ xs: 2, sm: 3 }}>
-          © {new Date().getFullYear()} Pamira Clinic. All rights reserved.
-        </Box>
         </Container>
+      </Box>
+      <Box
+        textAlign="center"
+        pt={{ xs: 1, sm: 2 }}
+        pb={{ xs: 1, sm: 2 }}
+        bgcolor="#001735"
+        color="#adbed2"
+      >
+        © {new Date().getFullYear()} Pamira Clinic. All rights reserved.
       </Box>
     </footer>
   );

@@ -10,6 +10,7 @@
       display: grid;
       grid-template-columns: repeat(2, auto);
       row-gap: 2rem;
-      padding-bottom: 3rem;
+      padding-bottom: 2rem;
+      margin: 20px
     }
   }
