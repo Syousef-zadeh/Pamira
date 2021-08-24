@@ -2,7 +2,7 @@ import React, { useRef, useImperativeHandle } from "react";
 
 import styles from "./Input.module.css";
 
-const Input =React.forwardRef ((props, ref) => {
+const Input = React.forwardRef((props, ref) => {
   const inputRef = useRef();
 
   const active = () => {
@@ -22,7 +22,14 @@ const Input =React.forwardRef ((props, ref) => {
       }`}
     >
       <label>{props.label}</label>
-      <input type={props.type} placeholder={props.placeholder} value={props.value} maxLength="6" />
+      <input
+        type={props.type}
+        placeholder={props.placeholder}
+        value={props.value}
+        maxLength="6"
+        name={props.name}
+        onChange={props.onChange}
+      />
     </div>
   );
 });
