@@ -23,7 +23,8 @@
 }
 
 .serviceCard:hover{
-    transform: translateY(-2rem);
+    /* transform: translateY(-2rem); */
+    transform: scale(1.07);
 }
 .serviceCard:hover Button{
     background-color: #283b42;

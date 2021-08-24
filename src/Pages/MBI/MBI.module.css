@@ -1,0 +1,11 @@
+.mbi{
+    margin:4rem;
+    text-align: center;
+}
+
+.formMbi{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}

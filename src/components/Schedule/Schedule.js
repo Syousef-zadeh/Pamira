@@ -11,11 +11,11 @@ const Schedule = () => {
       <div className={styles["schedule-table"]}>
         <div className={styles.weekdays}>
           <ScheduleTable day="Saturday" hour="Close" />
-          <ScheduleTable day="Sunday" hour="8am - 7pm" />
+          <ScheduleTable day="Sunday" hour="2pm - 6pm" />
           <ScheduleTable day="Monday" hour="Close" />
-          <ScheduleTable day="Tuesday" hour="8am - 7pm" />
-          <ScheduleTable day="Wednsday" hour="8am - 7pm" />
-          <ScheduleTable day="Thursday" hour="8am - 5pm" />
+          <ScheduleTable day="Tuesday" hour="2pm - 6pm" />
+          <ScheduleTable day="Wednsday" hour="Close" />
+          <ScheduleTable day="Thursday" hour="2pm - 6pm" />
           <ScheduleTable day="Friday" hour="Close" />
         </div>
         <img
