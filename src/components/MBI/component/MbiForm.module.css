@@ -1,0 +1,15 @@
+.mbiForm{
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 1rem 2rem;
+    align-content: center;
+}
+
+.form-input{
+    box-shadow: 0 2px 8px #283b42;
+    padding: 2rem;
+    border-radius: 4px;
+}

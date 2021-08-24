@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../UI/Button/button";
-import styles from "./MbiBtn.module.css";
+import styles from "./MbiButton.module.css";
 
 const MbiBtn = () => {
   return (
