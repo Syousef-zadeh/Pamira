@@ -9,7 +9,7 @@ import img3 from "../../assets/filler.jpg";
 
 const Services = (props) => {
   return (
-    <div>
+    <div className={styles.service}>
         <h2 className={styles.title}>Our Services</h2>
       <RowServices />
       <div className={styles.imgCard}>

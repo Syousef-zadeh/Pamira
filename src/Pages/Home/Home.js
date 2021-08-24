@@ -8,7 +8,7 @@ import img2 from "../../assets/massage.jpg";
 import img3 from "../../assets/skincare.jpg";
 import Services from "../../components/Services/Services";
 import Schedule from "../../components/Schedule/Schedule";
-import MBI from "../../components/MBI/Mbi";
+import MBI from "../../components/MBI/MbiBtn";
 
 
 const Home = () => {

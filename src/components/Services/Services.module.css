@@ -1,6 +1,9 @@
-*{
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
+.service{
+  margin-bottom: 4rem;
+}
 .imgCard {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -8,14 +11,14 @@
   gap: 1rem;
 }
 
-.title{
-    width: 100%;
-    padding: 3rem 0 1rem 0;
-    text-align: center;
+.title {
+  width: 100%;
+  padding: 3rem 0 1rem 0;
+  text-align: center;
 }
 
 @media only screen and (max-width: 650px) {
-  .imgCard{
+  .imgCard {
     display: grid;
     grid-template-columns: repeat(1, auto);
     row-gap: 2rem;
