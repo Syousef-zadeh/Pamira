@@ -1,0 +1,13 @@
+.mbiBtn{
+    padding: 3rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    /* background-color: #1d6a96; */
+    color: aliceblue;
+    background-image: url(../../assets/Background/mbi2.jpg);
+}
+
+Button:hover{
+    transform: scale(1.03);
+}
