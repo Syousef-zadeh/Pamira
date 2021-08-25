@@ -1,15 +1,13 @@
 import React from "react";
 import Button from "../../UI/Button/button";
 import Input from "../../UI/Input/Input";
-import styles from './MbiForm.module.css';
+import styles from "./MbiForm.module.css";
 
 const MbiForm = (props) => {
-  const calculate =()=>{
-
-  }
+  const calculate = () => {};
   return (
-    <div className={styles.mbiForm}> 
-      <form className={styles['form-input']}>
+    <div className={styles.mbiForm}>
+      <form className={styles["form-input"]}>
         <Input
           name="hight"
           label="Height"
@@ -25,7 +23,14 @@ const MbiForm = (props) => {
           placeholder="80 kg"
         />
         <div>
-          <Button type="submit">Calculate</Button>
+          <Button
+            style={{
+              padding: ".5rem 1rem",
+            }}
+            type="submit"
+          >
+            Calculate
+          </Button>
         </div>
       </form>
     </div>
