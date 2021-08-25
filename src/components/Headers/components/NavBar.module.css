@@ -88,8 +88,9 @@
   z-index: 5;
   top: 5.25rem;
   right: 0rem;
-  width: 30%;
-  transition: 0.800s ease;
+  width: 200px;
+  transform: translateX(0);
+  transition: 0.800s ease;  
 }
 
 .display{
