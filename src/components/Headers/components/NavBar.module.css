@@ -27,6 +27,8 @@
   color: rgb(15, 14, 14);
   text-decoration: none;
 }
+
+
 .nav a:hover,
 .nav a:active,
 .nav a.active {
@@ -34,6 +36,13 @@
   padding-bottom: 0.25rem;
   font-weight: bold;
   border-bottom: 2px solid #00142f;
+}
+
+.expandNav a:hover,
+.expandNav a:active{
+  background-color: #00142f;
+  color: white;
+
 }
 .ImgLogo {
   height: 110px;
@@ -57,20 +66,59 @@
     justify-self: end;
     align-self: center;
   }
-  svg{
-    width: 2rem;
-    height: 2rem;
-  }
+
   .svgBtn {
     display: flex;
     justify-self: end;
+    width: 1.75rem;
+    height: 1.75rem;
   }
   .navbar {
     display: none;
 
   }
-  .expandNav{
-    display: flex;
-    justify-self: end;
-  }
+}
+
+.expandNavbar{
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  z-index: 5;
+  top: 5.25rem;
+  right: 0rem;
+  width: 30%;
+  transition: 0.800s ease;
+}
+
+.display{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+  padding: 0 10%;
+  align-content: end;
+  margin-bottom: 1rem;
+}
+.display a{
+  color: rgb(15, 14, 14);
+  text-decoration: none;
+}
+
+.display ul{
+  color: black;
+  list-style: none;
+  display: grid;
+  row-gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  grid-column-start: none;
+}
+
+.display .ImgLogo{
+  height: 80px;
+  width: 80px;
+  padding: .5rem;
 }

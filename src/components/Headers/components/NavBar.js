@@ -9,10 +9,10 @@ const NavBar = (props) => {
   const [showNavbar, setShowNavbar] = useState(true);
 
   return (
-    <div className={styles.nav}>
+    <div className={showNavbar ? styles.nav : styles.display}>
       <img className={styles.ImgLogo} src={logoImg} alt="Pamira-logo" />
       <nav className={styles.navbar}>
-        <ul className={styles.desktopNavbar}>
+        <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -31,11 +31,11 @@ const NavBar = (props) => {
         </ul>
       </nav>
       <div className={styles.toggleButton}>
-        <div className={styles.svgBtn}>
-          <GiHamburgerMenu onClick={() => setShowNavbar(!showNavbar)} />
-        </div>
+        
+          <GiHamburgerMenu className={styles.svgBtn} onClick={() => setShowNavbar(!showNavbar)} />
+
         {!showNavbar && (
-          <nav >
+          <nav className={styles.expandNavbar}>
             <ul
               className={showNavbar ? styles.desktopNavbar : styles.expandNav}
             >
