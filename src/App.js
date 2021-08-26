@@ -13,6 +13,9 @@ function App() {
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/" component={Home} />
         <Route exact path="/Mbi-calculate" component={Mbi}/>
+        <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/>
+
+        
       </Switch>
       <Footer />
     </BrowserRouter>
