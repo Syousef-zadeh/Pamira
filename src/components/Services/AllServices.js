@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../UI/services/Card";
-import styles from "./Services.module.css";
+import styles from "./AllServices.module.css";
 import RowServices from "./components/RowServices";
 
 import img1 from "../../assets/botox.jpg";
