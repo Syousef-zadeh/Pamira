@@ -21,7 +21,7 @@ const Input = React.forwardRef((props, ref) => {
         props.isValid === false ? styles.invalid : ""
       }`}
     >
-      <label>{props.label}</label>
+      {props.label && <label>{props.label}</label>}
       <input
         type={props.type}
         placeholder={props.placeholder}
