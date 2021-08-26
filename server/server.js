@@ -8,7 +8,7 @@ require('dotenv').config({path:"../config/keys.env"});
 var app = express()
 
 app.get('/', (req, res) => res.send('hello world'));
-app.get('/new', (req, res) => res.send('sheida'));
+
 
 app.use(fileUpload());
 app.use(session({
