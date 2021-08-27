@@ -8,7 +8,7 @@ import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 const SocialMedia = () => {
   return (
     <div>
-      <div className={styles.media}>
+      <div className={styles.media && styles.media}>
         <ul>
           <li>
             <Link to="https://www.instagram.com/pamira.clinic/?hl=en" className={styles.link}>
