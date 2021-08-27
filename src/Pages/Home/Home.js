@@ -11,7 +11,6 @@ import Schedule from "../../components/Schedule/Schedule";
 import MBIbtn from "../../components/MBI/MbiButton";
 import BookAppointment from "../../components/Headers/components/AppointmentButton";
 
-
 const Home = () => {
   return (
     <div>
@@ -43,12 +42,14 @@ const Home = () => {
         </Carousel>
       </div>
       <div className={styles.appointment}>
-        <BookAppointment  style={{
-              padding: "12px",
-              backgroundColor: "#283b42",
-              color: "white",
-              boxShadow:"0 0 20px 2px #00142f"
-            }}/>
+        <BookAppointment
+          style={{
+            padding: "12px",
+            backgroundColor: "#283b42",
+            color: "white",
+            boxShadow: "0 0 20px 2px #00142f",
+          }}
+        />
       </div>
       <Services />
       <MBIbtn />
