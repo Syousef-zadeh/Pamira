@@ -32,7 +32,7 @@ const Booking = () => {
             style={{
               padding: "8px",
               backgroundColor: "#283b42",
-              color: "white",
+              color: "white"
             }}
           >
             Send Request
