@@ -63,6 +63,8 @@ const MbiForm = (props) => {
           <Button
             style={{
               padding: ".5rem 1rem",
+              backgroundColor: "#283b42",
+              color: "white"
             }}
             onClick={calculate}
           >
