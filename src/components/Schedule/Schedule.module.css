@@ -32,4 +32,8 @@
       display: flex;
       flex-direction: column-reverse;
     }
+    .schedule-table{
+      margin: 5% 3%;
+    }
+    
 }

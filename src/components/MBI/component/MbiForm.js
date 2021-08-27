@@ -62,7 +62,7 @@ const MbiForm = (props) => {
         <div>
           <Button
             style={{
-              padding: ".5rem 1rem",
+              padding: ".5rem .5rem",
               backgroundColor: "#283b42",
               color: "white"
             }}

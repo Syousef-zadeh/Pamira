@@ -9,7 +9,7 @@ const MbiBtn = () => {
       <Link to="/Mbi-calculate">
         <Button
           style={{
-            padding: "1rem 5rem",
+            padding: "2rem 3rem",
             backgroundColor: "#283b42",
             color: "white",
           }}
