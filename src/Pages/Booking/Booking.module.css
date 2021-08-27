@@ -1,0 +1,16 @@
+.booking{
+    margin: 5% 23%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 1rem;
+    box-shadow:0 0 20px 2px #00142f;
+    border-radius: 10px;
+}
+
+.contact{
+    font-size: 20px;
+    margin-left: 1rem;
+    padding: 0 1rem 0 2rem;
+    background-color: #00142f;
+    color: white;
+}

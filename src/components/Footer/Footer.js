@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 
 import SocialMedia from "./component/SocialMedia";
+import Contact from "../Contact/Contact";
 
 const Footer = () => {
   return (
@@ -79,11 +80,7 @@ const Footer = () => {
                 </Link>
               </Box>
               <Box style={{ display: "flex", flexDirection: "column" }}>
-                <span style={{ paddingTop: "16px" }}>
-                  Address: 17 shahrivar Av. Tehran
-                </span>
-                <span>021-33345247</span>
-
+                <Contact />
                 <SocialMedia />
               </Box>
             </Grid>
