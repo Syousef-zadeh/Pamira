@@ -4,8 +4,9 @@
     background-color: #ffffff;
     color: rgb(1, 24, 22);
     padding: 4px 10px;
+    border: 2px solid white;
     border-radius: 25px;
-    border-color: white;
+    border-color: rgb(189, 187, 187);
     font-weight: bold;
     align-self: center;
 }
