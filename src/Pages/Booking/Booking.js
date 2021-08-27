@@ -10,20 +10,23 @@ const Booking = () => {
     <section>
       <h2 className={styles["booking-h2"]}>Booking an Appointment</h2>
       <div className={styles.booking}>
-        <div>
-          <Input placeholder="Full Name*" type="text" />
-          <Input placeholder="Phone Number*" type="tel" />
-          <Input placeholder="Procedure" type="text" />
-          <Input placeholder="Desired Date" type="Date" />
+        <div className={styles.mobile}>
+          <div>
+            <Input placeholder="Full Name*" type="text" />
+            <Input placeholder="Phone Number*" type="tel" />
+            <Input placeholder="Procedure" type="text" />
+            <Input placeholder="Desired Date" type="Date" />
           <label>Comments</label>
           <textarea />
+          </div>
+          <div className={styles.contact}>
+            <h3 style={{ padding: "1rem" }}>Pamira Clinic</h3>
+            <Contact />
+
+            <SocialMedia />
+          </div>
         </div>
-        <div className={styles.contact}>
-          <h3 style={{ padding: "1rem" }}>Pamira Clinic</h3>
-          <Contact />
-          
-          <SocialMedia/>
-        </div>
+
         <div>
           <Button
             style={{

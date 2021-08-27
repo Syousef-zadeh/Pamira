@@ -1,10 +1,14 @@
 .booking{
     margin:2% 23% 5% 23%;
-    display: grid;
-    grid-template-columns: 60% 40%;
+
     padding: 1rem;
     box-shadow:0 0 20px 2px #00142f;
     border-radius: 10px;
+}
+
+.mobile{
+    display: grid;
+    grid-template-columns: 60% 40%;
 }
 
 .contact{
@@ -28,11 +32,18 @@ textarea {
 }
 
 @media only screen and (max-width: 860px){
-    .booking{
+    .mobile{
         display: flex;
         flex-direction: column-reverse;
     }
+    .booking{
+        margin: 2% 10% 5% 10%;
+    }
     .contact{
         margin-left: 0;
+    }
+    .booking-h2{
+        margin: 5% 15% 5% 18%;
+        font-size: 24px
     }
 }
