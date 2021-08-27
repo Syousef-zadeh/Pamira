@@ -11,7 +11,7 @@ const SocialMedia = () => {
       <div className={styles.media}>
         <ul>
           <li>
-            <Link to="https://www.instagram.com/pamira.clinic/?hl=en" className={styles.link}>
+            <Link to="https://www.instagram.com/pamira.clinic/?hl=en" className={styles.link && styles.link}>
               <ImYoutube />
             </Link>
           </li>

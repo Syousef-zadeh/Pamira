@@ -25,9 +25,10 @@ a{
 svg{
     height: 1.25rem;
     width: 1.25rem;
+    
 }
 .link:hover{
     color: aliceblue;
     border: 2px solid red;
-    background-color: rgba(219, 39, 39, 0.897);
+    background-color: rgba(219, 39, 39, 0.945);
 }
