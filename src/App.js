@@ -6,6 +6,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Service from "./Pages/Services/ServiceDetails";
 import Booking from "./Pages/Booking/Booking";
+import Login from "./Pages/Login/login";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/Mbi-calculate" component={Mbi}/>
         <Route path="/book-appointment" component={Booking}/>
+        <Route path="/administrator" component={Login}/>
         <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/>
         <Route exact path="/service-details/:serviceId" component={Service} />
       </Switch>

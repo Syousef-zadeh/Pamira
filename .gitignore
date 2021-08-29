@@ -1,5 +1,5 @@
 /node_modules/
-/config/
+config/keys.env
 .DS_Store
 src/.DS_Store
 /.eslintcache/
