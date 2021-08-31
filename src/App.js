@@ -15,12 +15,12 @@ function App() {
       <Header />
       <Switch>
         <Route path="/Contact" component={Contact} />
-        <Route exact path="/" component={Home} />
         <Route path="/Mbi-calculate" component={Mbi}/>
         <Route path="/book-appointment" component={Booking}/>
         <Route path="/administrator" component={Login}/>
         <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/>
         <Route exact path="/service-details/:serviceId" component={Service} />
+        <Route exact path="/" component={Home} />
       </Switch>
       <Footer />
     </BrowserRouter>

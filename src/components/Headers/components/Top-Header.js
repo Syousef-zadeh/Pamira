@@ -9,7 +9,7 @@ const TopHeader = (props) => {
     <div className={styles.topHeader}>
       <div className={styles.info}>
         <BiPhoneCall className={styles.icons} />
-        <span>021-33307551</span>
+        <span>021-33345247</span>
         
         <AiFillInstagram className={styles.icons} />
         <span className={styles.address}>Pamira.clinic</span>
