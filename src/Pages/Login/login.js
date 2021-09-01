@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { useHistory } from "react-router-dom";
 import styles from "./login.module.css";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/button";

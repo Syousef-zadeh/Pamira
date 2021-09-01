@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Headers/Header";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
@@ -11,10 +11,7 @@ import Login from "./Pages/Login/login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
-  const [token, setToken] = useState();
-  if (!token) {
-    return <Login setToken={setToken} />;
-  }
+
   return (
     <BrowserRouter>
       <Header />
@@ -23,6 +20,7 @@ function App() {
         <Route path="/Mbi-calculate" component={Mbi} />
         <Route path="/book-appointment" component={Booking} />
         <Route path="/administrator/login" component={Login} />
+        
         <Route path="/dashboard" component={Dashboard} />
 
         {/* <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/> */}
