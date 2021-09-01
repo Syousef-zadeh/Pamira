@@ -26,7 +26,7 @@ const Input = React.forwardRef((props, ref) => {
         type={props.type}
         placeholder={props.placeholder}
         value={props.value}
-        maxLength="6"
+        minLength="5"
         name={props.name}
         onChange={props.onChange}
       />
