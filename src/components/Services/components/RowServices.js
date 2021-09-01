@@ -15,6 +15,7 @@ const RowServices = (props) => {
 
   useEffect(() => {
     const fetchServices = () => {
+
       try {
         fetch("https://pamira-clinic.herokuapp.com/services")
           .then((res) => res.json())
@@ -24,13 +25,13 @@ const RowServices = (props) => {
           });
       } catch (error) {
         console.log(error);
+        setIsLoading(true);
+        setError(null);
       }
     };
     fetchServices();
   }, []);
 
-  setIsLoading(true);
-  setError(null);
   let content = <p>Found no Data</p>;
   if (service.length > 0) {
     content = service.map((item => <ServicesCard img={item.serviceImage} title={item.serviceName} />))
