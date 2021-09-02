@@ -1,0 +1,22 @@
+.contact{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5% 18%;
+    padding: 2rem;
+    box-shadow:0 0 20px 2px #00142f;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.image{
+    text-align: center;
+}
+.contactImage{
+    width: 50%;
+}
+.content{
+    background-image: url("/src/assets/Background/mbi.jpg");
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: end;
+}
