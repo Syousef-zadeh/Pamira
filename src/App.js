@@ -15,6 +15,8 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+      <main>
+
       <Switch>
         <Route path="/Contact" component={Contact} />
         <Route path="/Mbi-calculate" component={Mbi} />
@@ -27,6 +29,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/service-details/:serviceId" component={Service} />
       </Switch>
+      </main>
       <Footer />
     </BrowserRouter>
   );
