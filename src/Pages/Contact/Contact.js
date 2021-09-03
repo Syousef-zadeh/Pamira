@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Contact.module.css";
 import contactImg from "../../assets/pamira.png";
+import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
 const Contact = () => {
   return (
@@ -12,8 +13,11 @@ const Contact = () => {
         <p>Address: Tehran - 17 Shahrivar</p>
         <p>Phone: 021-33345247</p>
         <p>Mobile: 09904800254</p>
-
+        <div className={styles.socialM}>
+        <SocialMedia />
+        </div>
       </div>
+
     </div>
   );
 };

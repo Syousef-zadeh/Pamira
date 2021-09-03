@@ -1,14 +1,25 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Login from "../Login/login";
+import Button from "../../components/UI/Button/button";
 
 
-const Dashboard = () => {
-    const [token, setToken] = useState();
-if (!token) {
-  return <Login setToken={setToken} />;
-}
-    return(
-        <h2>Dashboard</h2>
-    ) 
+const Dashboard = (props) => {
+  const history = useHistory();
+
+  return (
+    <div>
+      <h2>Dashboard</h2>
+      <Button
+        onClick={() => {
+          localStorage.removeItem("userInfo");
+           props.setToken("");
+          history.push("/");
+        }}
+      >
+        Logout
+      </Button>
+    </div>
+  );
 };
 export default Dashboard;
