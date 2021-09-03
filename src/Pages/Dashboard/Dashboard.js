@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import Login from "../Login/login";
 import Button from "../../components/UI/Button/button";
 
 
