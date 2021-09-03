@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import PropTypes from "prop-types";
 import styles from "./login.module.css";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/button";
