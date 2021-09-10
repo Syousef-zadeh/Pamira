@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from './Dashboard.module.css';
 import axios from "axios";
 import Loading from "../../components/Loading/LoadingPage";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
@@ -70,9 +71,9 @@ const Dashboard = (props) => {
   };
 
   return (
-    <div>
+    <div className={styles.dashboard}>
       <h2>Dashboard</h2>
-      <div>
+      <div className ={styles.upload}>
         <h5>Add a Service</h5>
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
         {loading && <Loading />}
