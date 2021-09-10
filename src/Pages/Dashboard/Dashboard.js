@@ -9,33 +9,61 @@ import Input from "../../components/UI/Input/Input";
 const Dashboard = (props) => {
   const history = useHistory();
   const [fileName, setFileName] = useState("");
+  const [file, setFile] = useState("");
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(false);
 
   const [error, setError] = useState(false);
-  const onchangeFile = (e) => {
-    setFileName(e.target.file[0]);
+  const onchange =async (e) => {
+    //setFileName(e.target.files[0]);
+    const file = e.target.files[0];
+    const base64 = await converBase64(file);
+    console.log(base64);
+    setFileName(base64);
+    // setFile(e.target.files[0].name)
   };
+
+  const converBase64 =(file) =>{
+    return new Promise((resolve, reject)=>{
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload =()=>{
+        resolve(fileReader.result)
+      };
+      fileReader.onerror=(error)=>{
+        reject(error)
+      }
+    })
+  }
+  console.log(fileName);
+  console.log(title);
 
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
+      const fb = new FormData();
+      fb.append("serviceName", title);
+      fb.append("serviceImage", fileName);
+
+      // const config = {
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //   },
+      // };
       setLoading(true);
       const { data } = await axios.post(
         "http://localhost:5000/api/services/add",
-        {
-          fileName,
-          title,
-        },
-        config
+        fb
+        // "http://localhost:5000/api/services/add",
+        // {
+        //   file,
+        //   fileName,
+        //   title,
+        // },
+        // config
       );
-
-      localStorage.setItem("userInfo", JSON.stringify(data));
+      console.log(data);
+      //localStorage.setItem("serviceInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
       setError(error.response.data.message);
@@ -50,30 +78,32 @@ const Dashboard = (props) => {
         <h5>Add a Service</h5>
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
         {loading && <Loading />}
-        <Input
-          placeholder="Service Title"
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <Input
-          placeholder="Photo"
-          type="file"
-          name="serviceImage"
-          value={fileName}
-          onChange={(e) => setFileName(e.target.value)}
-        />
-        <Button
-          style={{
-            backgroundColor: "#283b42",
-            color: "white",
-            padding: "4px 18px",
-          }}
-          type="submit"
-          onClick={submitHandler}
-        >
-          Add Service
-        </Button>
+        <form encType="multipart/form-data">
+          <Input
+            placeholder="Service Title"
+            type="text"
+            filename="serviceName"
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <Input
+            placeholder="Photo"
+            type="file"
+            filename="serviceImage"
+            onChange={(e) => onchange(e)}
+            //onChange={(e) => setFileName(e.target.value)}
+          />
+          <Button
+            style={{
+              backgroundColor: "#283b42",
+              color: "white",
+              padding: "4px 18px",
+            }}
+            type="submit"
+            onClick={submitHandler}
+          >
+            Add Service
+          </Button>
+        </form>
       </div>
       <Button
         onClick={() => {
