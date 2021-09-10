@@ -34,7 +34,7 @@ const RowServices = (props) => {
 
   let content = <p>Found no Data</p>;
   if (service.length > 0) {
-    content = service.map((item => <ServicesCard img={item.serviceImage} title={item.serviceName} />))
+    content = service.map((item => <ServicesCard img={`/upload/${item.serviceImage}`} title={item.serviceName} />))
   }
   if (error) {
     content = <p>{error}</p>;
