@@ -71,7 +71,7 @@ const Dashboard = (props) => {
 
   return (
     <div className={styles.dashboard}>
-      <div  className={styles.logout}>
+      <div className={styles.logout}>
         <h2>Dashboard</h2>
         <Button
           onClick={() => {
@@ -101,17 +101,19 @@ const Dashboard = (props) => {
           //value={fileName}
           onChange={onchangeFile}
         />
-        <Button
-          style={{
-            backgroundColor: "#283b42",
-            color: "white",
-            padding: "4px 18px",
-          }}
-          type="submit"
-          onClick={submitHandler}
-        >
-          Add Service
-        </Button>
+        <div className={styles.sbmBtn}>
+          <Button
+            style={{
+              backgroundColor: "#283b42",
+              color: "white",
+              padding: "9px 18px",
+            }}
+            type="submit"
+            onClick={submitHandler}
+          >
+            Add Service
+          </Button>
+        </div>
       </div>
     </div>
   );
