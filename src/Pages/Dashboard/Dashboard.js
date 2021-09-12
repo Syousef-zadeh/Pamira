@@ -17,16 +17,6 @@ const Dashboard = (props) => {
 
   const [error, setError] = useState(false);
 
-  const onchangeFile = async (e) => {
-    //setFileName(e.target.files[0]);
-    const file = e.target.files[0];
-    console.log(e.target.files[0].name);
-    const base64 = await converBase64(file);
-    console.log(base64);
-    setFile(base64);
-    setFileName(e.target.files[0].name);
-  };
-
   const converBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
@@ -39,8 +29,20 @@ const Dashboard = (props) => {
       };
     });
   };
-  console.log(typeof fileName);
-  console.log(serviceName);
+  
+  const onchangeFile = async (e) => {
+    setFileName(e.target.files[0]);
+    const file = e.target.files[0];
+    console.log("File");
+    console.log(file);
+    console.log(e.target.files[0].name);
+    const base64 = await converBase64(file);
+    console.log("Base64");
+    console.log(base64);
+    setFile(base64);
+    // var bindata = new Buffer(string.split(",")[1],"base64");
+    setFileName(e.target.files[0].name);
+  };
 
   const submitHandler = async (e) => {
     e.preventDefault();
