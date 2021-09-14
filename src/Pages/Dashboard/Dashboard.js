@@ -29,18 +29,14 @@ const Dashboard = (props) => {
       };
     });
   };
-  
+
   const onchangeFile = async (e) => {
     setFileName(e.target.files[0]);
     const file = e.target.files[0];
-    console.log("File");
-    console.log(file);
     console.log(e.target.files[0].name);
     const base64 = await converBase64(file);
     console.log("Base64");
-    console.log(base64);
     setFile(base64);
-    // var bindata = new Buffer(string.split(",")[1],"base64");
     setFileName(e.target.files[0].name);
   };
 
@@ -62,7 +58,6 @@ const Dashboard = (props) => {
         },
         config
       );
-
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
