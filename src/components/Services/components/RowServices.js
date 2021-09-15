@@ -68,10 +68,6 @@ const RowServices = (props) => {
   return (
     <div className={styles["row-services"]}>
       {createContent()}
-      <ServicesCard img={imgMeso} title="Mesotherapy" />
-      <ServicesCard img={imgLaser} title="Laser" />
-      <ServicesCard img={imgMicro} title="microdermy" />
-      <ServicesCard img={imgBeauty} title="skin care" />
     </div>
   );
 };

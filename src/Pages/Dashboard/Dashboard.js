@@ -5,7 +5,6 @@ import Loading from "../../components/Loading/LoadingPage";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { useHistory } from "react-router-dom";
 import Button from "../../components/UI/Button/button";
-
 import Input from "../../components/UI/Input/Input";
 
 const Dashboard = (props) => {
@@ -50,7 +49,7 @@ const Dashboard = (props) => {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/services/add",
+        "https://pamira-clinic.herokuapp.com/api/services/add",
         {
           file,
           fileName,
