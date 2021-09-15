@@ -2,11 +2,6 @@ import React, { useEffect, useState } from "react";
 import ServicesCard from "../../UI/services/ServicesCard";
 import styles from "./RowServices.module.css";
 
-import imgMeso from "../../../assets/row-service/mesotrherapy.png";
-import imgMicro from "../../../assets/row-service/micro-dermi.png";
-import imgLaser from "../../../assets/row-service/laser.png";
-import imgBeauty from "../../../assets/row-service/beauty.png";
-
 const RowServices = (props) => {
   const arrayBufferToBase64 = (buffer) => {
     let base64ToString = Buffer.from(buffer, "base64").toString();
@@ -20,7 +15,7 @@ const RowServices = (props) => {
   useEffect(() => {
     const fetchServices = () => {
       try {
-        fetch("http://localhost:5000/api/services/")
+        fetch("https://pamira-clinic.herokuapp.com/api/services/")
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

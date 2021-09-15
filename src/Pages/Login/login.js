@@ -51,7 +51,6 @@ const Login = (props) => {
               placeholder="Username"
               id="email"
               required
-              //ref={emailInputRef}
               value={username}
               type="text"
               onChange={(u) => setUsername(u.target.value)}
@@ -61,7 +60,6 @@ const Login = (props) => {
               type="password"
               id="password"
               required
-              //ref={passwordInputRef}
               onChange={(p) => setPassword(p.target.value)}
             />
             <div className={styles.btn}>
