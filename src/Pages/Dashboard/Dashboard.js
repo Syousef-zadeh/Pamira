@@ -6,6 +6,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { useHistory } from "react-router-dom";
 import Button from "../../components/UI/Button/button";
 import Input from "../../components/UI/Input/Input";
+import Appointments from "./Appointments/Appointment";
 
 const Dashboard = (props) => {
   const history = useHistory();
@@ -109,6 +110,9 @@ const Dashboard = (props) => {
           >
             Add Service
           </Button>
+        </div>
+        <div>
+          <Appointments />
         </div>
       </div>
     </div>

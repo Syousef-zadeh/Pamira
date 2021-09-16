@@ -30,6 +30,14 @@ textarea {
     margin: 5% 23% 0 23%;
 }
 
+.sectionForm{
+    position: relative;
+}
+.errors{
+    position: relative;
+    z-index: 10;
+}
+
 @media only screen and (max-width: 860px){
     .mobile{
         display: flex;

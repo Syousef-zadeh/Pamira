@@ -27,7 +27,7 @@ const Booking = () => {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/booking/add",
+        "https://pamira-clinic.herokuapp.com/api/booking/add",
         {
           fullName,
           phoneNumber,
@@ -36,8 +36,9 @@ const Booking = () => {
           comments,
         },
         config
-      );
-      localStorage.setItem("userInfo", JSON.stringify(data));
+        );
+        console.log(data);
+        localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
       setError(error.response.data.message);
@@ -46,9 +47,11 @@ const Booking = () => {
   };
 
   return (
-    <section>
-      {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
-      {loading && <Loading />}
+    <section className={styles.sectionForm}>
+      <div className={styles.errors}>
+        {error && <ErrorMessage  variant="danger">{error}</ErrorMessage>}
+        {loading && <Loading />}
+      </div>
       <h2 className={styles["booking-h2"]}>Booking an Appointment</h2>
       <form>
         <div className={styles.booking}>
