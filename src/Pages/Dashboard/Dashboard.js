@@ -95,7 +95,6 @@ const Dashboard = (props) => {
           placeholder="Photo"
           type="file"
           name="serviceImage"
-          //value={fileName}
           onChange={onchangeFile}
         />
         <div className={styles.sbmBtn}>
