@@ -77,6 +77,7 @@ const Dashboard = (props) => {
             props.setToken("");
             history.push("/");
           }}
+          style={{padding:" .30rem 1rem"}}
         >
           Logout
         </Button>
@@ -110,9 +111,10 @@ const Dashboard = (props) => {
             Add Service
           </Button>
         </div>
-        <div>
-          <Appointments />
-        </div>
+      </div>
+      <div>
+        <h2 style={{margin: "2% 0"}}>Appointments</h2>
+        <Appointments />
       </div>
     </div>
   );
