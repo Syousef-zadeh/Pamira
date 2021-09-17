@@ -20,7 +20,6 @@ const RowServices = (props) => {
         fetch("https://pamira-clinic.herokuapp.com/api/services/")
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data);
             setService(data);
           });
       } catch (error) {
