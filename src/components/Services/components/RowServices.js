@@ -11,15 +11,16 @@ const RowServices = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [service, setService] = useState([]);
-
+  const [deleted, setDeleted] = useState(0);
 
   useEffect(() => {
     const fetchServices = () => {
+      console.log("Hiii")
       try {
         fetch("https://pamira-clinic.herokuapp.com/api/services/")
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             setService(data);
           });
       } catch (error) {
@@ -29,42 +30,40 @@ const RowServices = (props) => {
       }
     };
     fetchServices();
-  }, []);
+  }, [deleted]);
 
   const createContent = () => {
     if (error) {
       return <p>{error}</p>;
-     }
+    }
 
-     if (isLoading) {
+    if (isLoading) {
       return <p>Loading...</p>;
     }
 
-    if(service.length > 0) {
-      return(
-        service.map((item) => {
-          var base64Flag = "data:image/jpeg;base64";
-          var imageStr = arrayBufferToBase64(item.serviceImage.data.data);
-          var imgService = base64Flag + imageStr;
-    
-          console.log("data");
+    if (service.length > 0 && error === null) {
+      return service.map((item) => {
+        var base64Flag = "data:image/jpeg;base64";
+        var imageStr = arrayBufferToBase64(item.serviceImage.data.data);
+        var imgService = base64Flag + imageStr;
 
-          return <ServicesCard
+        console.log("data");
 
+        return (
+          <ServicesCard
+            setDeleted={setDeleted}
+            deleted={deleted}
+            id={item._id}
             img={imgService}
             title={item.serviceName}
-          />; })
-      )
+          />
+        );
+      });
     } else {
       return <p>Found no Data</p>;
     }
   };
 
-  
-  return (
-    <div className={styles["row-services"]}>
-      {createContent()}
-    </div>
-  );
+  return <div className={styles["row-services"]}>{createContent()}</div>;
 };
 export default RowServices;
