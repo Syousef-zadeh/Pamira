@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ServicesCard.module.css";
 import Button from "../Button/button";
 import useToken from "../../useToken/useToken";
@@ -30,7 +30,6 @@ const ServicesCard = (props) => {
     if (token && token.length > 1) {
       return (
         <div className={styles.adminBtn}>
-          {/* <Link to="/service/details/:id"> */}
           <Button
             className={styles.button}
             onClick={() => {
@@ -39,7 +38,6 @@ const ServicesCard = (props) => {
           >
             More Details
           </Button>
-          {/* </Link> */}
           <Button>Edit</Button>
           <Button onClick={() => deleteService(props.id)}>Delete</Button>
         </div>
@@ -49,7 +47,6 @@ const ServicesCard = (props) => {
         <Link to="/service/details/:id">
           <Button
             className={styles.button}
-            // onClick={}
           >
             More Details
           </Button>
