@@ -22,7 +22,7 @@ function App() {
           <Route path="/Mbi-calculate" component={Mbi} />
           <Route path="/book-appointment" component={Booking} />
           <Route path="/dashboard" component={() => token && token.length > 1 ? <Dashboard setToken={setToken}/> : <Login setToken={setToken}/>} />   
-          <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/>
+          {/* <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/service-details/:serviceId" component={Service} />
         </Switch>
