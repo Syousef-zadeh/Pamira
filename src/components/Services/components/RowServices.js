@@ -15,7 +15,6 @@ const RowServices = (props) => {
 
   useEffect(() => {
     const fetchServices = () => {
-      
       try {
         fetch("https://pamira-clinic.herokuapp.com/api/services/")
           .then((res) => res.json())
@@ -47,15 +46,17 @@ const RowServices = (props) => {
         var imgService = base64Flag + imageStr;
 
         // console.log("data");
-
+        
         return (
-          <ServicesCard
-            setDeleted={setDeleted}
-            deleted={deleted}
-            id={item._id}
-            img={imgService}
-            title={item.serviceName}
-          />
+          <div>
+            <ServicesCard
+              setDeleted={setDeleted}
+              deleted={deleted}
+              id={item._id}
+              img={imgService}
+              title={item.serviceName}
+            />
+          </div>
         );
       });
     } else {
