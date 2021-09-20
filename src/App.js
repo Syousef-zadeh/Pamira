@@ -12,7 +12,8 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import useToken from "./components/useToken/useToken";
 
 function App() {
-  const {setToken, token} = useToken();
+
+  const { setToken, token } = useToken();
   return (
     <BrowserRouter>
       <Header />
@@ -21,10 +22,19 @@ function App() {
           <Route path="/Contact" component={Contact} />
           <Route path="/Mbi-calculate" component={Mbi} />
           <Route path="/book-appointment" component={Booking} />
-          <Route path="/dashboard" component={() => token && token.length > 1 ? <Dashboard setToken={setToken}/> : <Login setToken={setToken}/>} />   
+          <Route
+            path="/dashboard"
+            component={() =>
+              token && token.length > 1 ? (
+                <Dashboard setToken={setToken} />
+              ) : (
+                <Login setToken={setToken} />
+              )
+            }
+          />
           {/* <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/> */}
           <Route exact path="/" component={Home} />
-          <Route exact path="/service-details/:serviceId" component={Service} />
+          <Route exact path="/service/details/:id" component={Service} />
         </Switch>
       </main>
       <Footer />
