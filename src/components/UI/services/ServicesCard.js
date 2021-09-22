@@ -55,8 +55,8 @@ const ServicesCard = (props) => {
     }
   };
   return (
-    <div className={styles.serviceCard} id={props.id}>
-      <div className={styles["body-serviceCard"]}>
+    <div className={styles.serviceCard}  id={props.id}>
+      <div key={props.id} className={styles["body-serviceCard"]}>
         <img
           className={styles["img-card"]}
           name="serviceImage"

@@ -3,8 +3,8 @@ import React from "react";
 const ServiceDetailCard = (props) => {
   return (
     <div>
-      <h2>{props.serviceName}</h2>
-      <img src={props.serviceImage} alt={props.alt} />
+      <h2>{props.title}</h2>
+      <img src={`${props.image}`} alt={props.alt} />
     </div>
   );
 };

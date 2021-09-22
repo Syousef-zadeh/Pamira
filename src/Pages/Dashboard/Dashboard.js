@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 import Button from "../../components/UI/Button/button";
 import Input from "../../components/UI/Input/Input";
 import Appointments from "./Appointments/Appointment";
+import Compress from "react-image-file-resizer";
 
 const Dashboard = (props) => {
   const history = useHistory();
@@ -14,8 +15,20 @@ const Dashboard = (props) => {
   const [serviceName, setServiceName] = useState("");
   const [file, setFile] = useState("");
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState(false);
+
+  // const converBase64 = (file) => {
+  //   return new Promise((resolve, reject) => {
+  //     const fileReader = new FileReader();
+  //     fileReader.readAsDataURL(file);
+  //     fileReader.onload = () => {
+  //       resolve(fileReader.result);
+  //     };
+  //     fileReader.onerror = (error) => {
+  //       reject(error);
+  //     };
+  //   });
+  // };
 
   const converBase64 = (file) => {
     return new Promise((resolve, reject) => {
@@ -30,13 +43,33 @@ const Dashboard = (props) => {
     });
   };
 
+  const resizeFile = (file) =>
+    new Promise((resolve) => {
+      Compress.imageFileResizer(
+        file,
+        300,
+        400,
+        "JPEG",
+        80,
+        0,
+        (uri) => {
+          resolve(uri);
+          console.log("uri");
+          console.log(uri);
+        },
+        "base64"
+      );
+    });
+
   const onchangeFile = async (e) => {
     setFileName(e.target.files[0]);
     const file = e.target.files[0];
     console.log(e.target.files[0].name);
-    const base64 = await converBase64(file);
+    const image = await resizeFile(file);
+    console.log(image);
+    // const base64 = await converBase64(file);
     console.log("Base64");
-    setFile(base64);
+    setFile(image);
     setFileName(e.target.files[0].name);
   };
 
@@ -48,6 +81,7 @@ const Dashboard = (props) => {
           "Content-Type": "application/json",
         },
       };
+
       setLoading(true);
       const { data } = await axios.post(
         "https://pamira-clinic.herokuapp.com/api/services/add",
@@ -58,6 +92,7 @@ const Dashboard = (props) => {
         },
         config
       );
+
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
@@ -77,7 +112,7 @@ const Dashboard = (props) => {
             props.setToken("");
             history.push("/");
           }}
-          style={{padding:" .30rem 1rem"}}
+          style={{ padding: " .30rem 1rem" }}
         >
           Logout
         </Button>
@@ -95,6 +130,7 @@ const Dashboard = (props) => {
         <Input
           placeholder="Photo"
           type="file"
+          id="file"
           name="serviceImage"
           onChange={onchangeFile}
         />
@@ -113,7 +149,7 @@ const Dashboard = (props) => {
         </div>
       </div>
       <div>
-        <h2 style={{margin: "2% 0"}}>Appointments</h2>
+        <h2 style={{ margin: "2% 0" }}>Appointments</h2>
         <Appointments />
       </div>
     </div>
