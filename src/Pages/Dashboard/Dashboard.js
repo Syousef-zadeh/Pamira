@@ -40,7 +40,7 @@ const Dashboard = (props) => {
         200,
         300,
         "PNG",
-        70,
+        60,
         0,
         (uri) => {
           resolve(uri);

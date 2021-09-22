@@ -1,16 +1,76 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../UI/services/Card";
 import styles from "./AllServices.module.css";
 import RowServices from "./components/RowServices";
 import useToken from "../useToken/useToken";
 import { Link } from "react-router-dom";
-
-import img1 from "../../assets/botox.jpg";
-import img2 from "../../assets/Laser.jpeg";
-import img3 from "../../assets/filler.jpg";
 import { Button } from "react-bootstrap";
 
 const Services = (props) => {
+  const arrayBufferToBase64 = (buffer) => {
+    let base64ToString = Buffer.from(buffer, "base64").toString();
+    return base64ToString;
+  };
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [service, setService] = useState([]);
+  // const [deleted, setDeleted] = useState(0);
+
+  useEffect(() => {
+    const fetchServices = () => {
+      try {
+        fetch("http://localhost:5000/api/service/pamira/")
+          .then((res) => res.json())
+          .then((data) => {
+            setService(data);
+            console.log("data");
+            console.log(data);
+          });
+      } catch (error) {
+        console.log(error);
+        setIsLoading(true);
+        setError(null);
+      }
+    };
+    fetchServices();
+    console.log("service");
+    console.log(service);
+  }, []);
+
+  const createContent = () => {
+    if (error) {
+      return <p>{error}</p>;
+    }
+
+    if (isLoading) {
+      return <p>Loading...</p>;
+    }
+    if (service.length > 0 && error === null) {
+      return service.map((item) => {
+        var base64Flag = "data:image/jpeg;base64";
+        var imageStr = arrayBufferToBase64(item.serviceImage.data.data);
+        var imgService = base64Flag + imageStr;
+
+        return (
+          <div key={item._id}>
+            <Card
+              id={item._id}
+              img={imgService}
+              title={item.serviceName}
+              description={item.serviceDescription}
+              shortDes={item.serviceShortDes}
+              titleButton="View Details"
+             // deleted={setDeleted}
+            />
+          </div>
+        );
+      });
+    }else {
+    return <p>Found no Data</p>;
+  }
+  };
+
   const { token } = useToken();
   if (token && token.length > 1) {
     return (
@@ -23,24 +83,8 @@ const Services = (props) => {
         <h2 className={styles.title}>Our Services</h2>
         <RowServices />
         <div className={styles.imgCard}>
-          <Card
-            img={img1}
-            title="Botox"
-            description="Botox injections block certain chemical signals from nerves, mostly signals that cause muscles to contract."
-            titleButton="View Details"
-          />
-          <Card
-            img={img2}
-            title="Laser"
-            description="To remove the hair, most patients need 2 to 6 laser treatments."
-            titleButton="View Details"
-          />
-          <Card
-            img={img3}
-            title="Filler"
-            description="Injectable filler is a soft tissue filler injected into the skin at different depths to help fill in facial wrinkles, provide facial volume, and augment facial features: restoring a smoother appearance."
-            titleButton="View Details"
-          />
+          {createContent()}
+ 
         </div>
       </div>
     );
@@ -50,24 +94,8 @@ const Services = (props) => {
         <h2 className={styles.title}>Our Services</h2>
         <RowServices />
         <div className={styles.imgCard}>
-          <Card
-            img={img1}
-            title="Botox"
-            description="Botox injections block certain chemical signals from nerves, mostly signals that cause muscles to contract."
-            titleButton="View Details"
-          />
-          <Card
-            img={img2}
-            title="Laser"
-            description="To remove the hair, most patients need 2 to 6 laser treatments."
-            titleButton="View Details"
-          />
-          <Card
-            img={img3}
-            title="Filler"
-            description="Injectable filler is a soft tissue filler injected into the skin at different depths to help fill in facial wrinkles, provide facial volume, and augment facial features: restoring a smoother appearance."
-            titleButton="View Details"
-          />
+          {createContent()}
+   
         </div>
       </div>
     );
