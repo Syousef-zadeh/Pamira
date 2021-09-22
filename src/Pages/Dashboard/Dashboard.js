@@ -14,8 +14,8 @@ const Dashboard = (props) => {
   const [fileName, setFileName] = useState("");
   const [serviceName, setServiceName] = useState("");
   const [serviceDescription, setServiceDescription] = useState("");
+  const [serviceShortDes, setServiceShortDes] = useState("");
 
-  
   const [file, setFile] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -92,6 +92,37 @@ const Dashboard = (props) => {
     }
   };
 
+  //Large services
+  const submitServiceHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      setLoading(true);
+      const { data } = await axios.post(
+        "http://localhost:5000/api/service/pamira/add",
+        {
+          file,
+          fileName,
+          serviceName,
+          serviceDescription,
+          serviceShortDes,
+        },
+        config
+      );
+
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      setLoading(false);
+    } catch (error) {
+      setError(error.response.data.message);
+      setLoading(false);
+    }
+  };
+
   return (
     <div className={styles.dashboard}>
       <div className={styles.logout}>
@@ -140,6 +171,50 @@ const Dashboard = (props) => {
             }}
             type="submit"
             onClick={submitHandler}
+          >
+            Add Service
+          </Button>
+        </div>
+      </div>
+
+      <div className={styles.upload}>
+        <h5>Add a Larg Service</h5>
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {loading && <Loading />}
+        <Input
+          placeholder="Service Title"
+          type="text"
+          value={serviceName}
+          onChange={(e) => setServiceName(e.target.value)}
+        />
+        <Input
+          placeholder="Brief Description"
+          type="text"
+          value={serviceShortDes}
+          onChange={(e) => setServiceShortDes(e.target.value)}
+        />
+        <textarea
+          placeholder="Service Description"
+          type="text"
+          value={serviceDescription}
+          onChange={(e) => setServiceDescription(e.target.value)}
+        />
+        <Input
+          placeholder="Photo"
+          type="file"
+          id="file"
+          name="serviceImage"
+          onChange={onchangeFile}
+        />
+        <div className={styles.sbmBtn}>
+          <Button
+            style={{
+              backgroundColor: "#283b42",
+              color: "white",
+              padding: "9px 18px",
+            }}
+            type="submit"
+            onClick={submitServiceHandler}
           >
             Add Service
           </Button>
