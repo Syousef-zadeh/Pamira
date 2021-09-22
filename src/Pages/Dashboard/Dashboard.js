@@ -37,10 +37,10 @@ const Dashboard = (props) => {
     new Promise((resolve) => {
       Compress.imageFileResizer(
         file,
+        200,
         300,
-        400,
         "PNG",
-        80,
+        70,
         0,
         (uri) => {
           resolve(uri);
@@ -118,7 +118,7 @@ const Dashboard = (props) => {
           value={serviceName}
           onChange={(e) => setServiceName(e.target.value)}
         />
-        <Input
+        <textarea
           placeholder="Service Description"
           type="text"
           value={serviceDescription}

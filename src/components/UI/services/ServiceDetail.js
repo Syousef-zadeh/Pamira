@@ -7,7 +7,9 @@ const ServiceDetailCard = (props) => {
   return (
     <div className={styles.details}>
       <div className={styles.detailGrid}>
-        <img src={`${props.image}`} alt={props.alt} />
+        <div className={styles.detailImg}>
+          <img src={`${props.image}`} alt={props.alt} />
+        </div>
         <div className={styles.des}>
           <h2>{props.title}</h2>
           <p>{props.description}</p>

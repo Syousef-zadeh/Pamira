@@ -4,7 +4,10 @@
   box-shadow: 0 2px 8px #283b42;
 }
 
-
+.detailImg{
+    text-align: center;
+    align-self: center;
+}
 .detailGrid {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -18,3 +21,10 @@
     display: flex;
     flex-direction: row-reverse;
 }
+@media only screen and (max-width: 750px) {
+    .detailGrid {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      row-gap: 2rem;
+    }
+  }
