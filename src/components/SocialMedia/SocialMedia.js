@@ -16,12 +16,12 @@ const SocialMedia = () => {
             </Link>
           </li>
           <li>
-            <Link className={styles.link}>
+            <Link to="#" className={styles.link}>
               <AiOutlineWhatsApp />
             </Link>
           </li>
           <li>
-            <Link className={styles.link}>
+            <Link to="#" className={styles.link}>
               <AiFillInstagram />
             </Link>
           </li>
