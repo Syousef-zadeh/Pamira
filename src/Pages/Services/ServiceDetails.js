@@ -14,7 +14,7 @@ const Service = (props) => {
   useEffect(() => {
     const fetchServices = () => {
       try {
-        fetch(`http://localhost:5000/api/services/details/${params.id}`).then(
+        fetch(`https://pamira-clinic.herokuapp.com/api/services/details/${params.id}`).then(
           (res) => res.json()
         ).then((data) => {
           setService(data);
