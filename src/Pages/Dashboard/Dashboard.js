@@ -17,6 +17,7 @@ const Dashboard = (props) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
+
   // const converBase64 = (file) => {
   //   return new Promise((resolve, reject) => {
   //     const fileReader = new FileReader();
@@ -30,26 +31,13 @@ const Dashboard = (props) => {
   //   });
   // };
 
-  const converBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
   const resizeFile = (file) =>
     new Promise((resolve) => {
       Compress.imageFileResizer(
         file,
         300,
         400,
-        "JPEG",
+        "PNG",
         80,
         0,
         (uri) => {

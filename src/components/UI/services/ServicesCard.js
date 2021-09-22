@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 const ServicesCard = (props) => {
- 
   const history = useHistory();
 
   const deleteService = (id, e) => {
@@ -22,7 +21,6 @@ const ServicesCard = (props) => {
       console.log(error);
     }
   };
-
 
   const { token } = useToken();
 
@@ -39,23 +37,24 @@ const ServicesCard = (props) => {
             More Details
           </Button>
           <Button>Edit</Button>
-          <Button onClick={() => deleteService(props.id)}>Delete</Button>
+          <Button
+            onClick={() => deleteService(props.id)}
+            style={{ backgroundColor: "red", color: "white" }}
+          >
+            Delete
+          </Button>
         </div>
       );
     } else {
       return (
         <Link to="/service/details/:id">
-          <Button
-            className={styles.button}
-          >
-            More Details
-          </Button>
+          <Button className={styles.button}>More Details</Button>
         </Link>
       );
     }
   };
   return (
-    <div className={styles.serviceCard}  id={props.id}>
+    <div className={styles.serviceCard} id={props.id}>
       <div key={props.id} className={styles["body-serviceCard"]}>
         <img
           className={styles["img-card"]}
