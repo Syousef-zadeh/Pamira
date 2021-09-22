@@ -24,7 +24,7 @@ const Service = (props) => {
       }
     };
     fetchServices();
-  }, []);
+  }, [params.id]);
 
 
   if (service) {
@@ -33,6 +33,6 @@ const Service = (props) => {
     var imgService = base64Flag + imageStr;
   }
   
-  return service ? <ServiceDetailCard title={service.serviceName} image={imgService} /> :<div>Loading....</div>
+  return service ? <ServiceDetailCard title={service.serviceName} image={imgService} description={service.serviceDescription}/> :<div>Loading....</div>
 };
 export default Service;

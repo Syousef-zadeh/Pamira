@@ -1,0 +1,20 @@
+.details {
+  margin: 5% 10%;
+  padding: 3%;
+  box-shadow: 0 2px 8px #283b42;
+}
+
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.des{
+    padding: 2%;
+    text-align: center;
+}
+.bookBtn{
+    display: flex;
+    flex-direction: row-reverse;
+}

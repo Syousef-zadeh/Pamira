@@ -13,10 +13,12 @@ const Dashboard = (props) => {
   const history = useHistory();
   const [fileName, setFileName] = useState("");
   const [serviceName, setServiceName] = useState("");
+  const [serviceDescription, setServiceDescription] = useState("");
+
+  
   const [file, setFile] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
 
   // const converBase64 = (file) => {
   //   return new Promise((resolve, reject) => {
@@ -77,6 +79,7 @@ const Dashboard = (props) => {
           file,
           fileName,
           serviceName,
+          serviceDescription,
         },
         config
       );
@@ -114,6 +117,12 @@ const Dashboard = (props) => {
           type="text"
           value={serviceName}
           onChange={(e) => setServiceName(e.target.value)}
+        />
+        <Input
+          placeholder="Service Description"
+          type="text"
+          value={serviceDescription}
+          onChange={(e) => setServiceDescription(e.target.value)}
         />
         <Input
           placeholder="Photo"

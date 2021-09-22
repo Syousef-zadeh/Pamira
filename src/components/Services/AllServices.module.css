@@ -13,10 +13,15 @@
 
 .title {
   width: 100%;
-  padding: 3rem 0 1rem 0;
+  padding: 2.5rem 0 1rem 0;
   text-align: center;
 }
-
+.addService{
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: row-reverse;
+  margin-right: 10%;
+}
 @media only screen and (max-width: 650px) {
   .imgCard {
     display: grid;
