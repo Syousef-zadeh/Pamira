@@ -32,7 +32,6 @@ function App() {
               )
             }
           />
-          {/* <Route exact path="https://www.instagram.com/pamira.clinic/?hl=en"/> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/service/details/:id" component={Service} />
         </Switch>

@@ -11,19 +11,19 @@ const SocialMedia = () => {
       <div className={styles.media}>
         <ul>
           <li>
-            <Link to="https://www.instagram.com/pamira.clinic/?hl=en" className={styles.link && styles.link}>
+            <a href="https://www.youtube.com/channel/UCRs3PJXt3xgibLlpY0DmSYg" className={styles.link && styles.link}>
               <ImYoutube />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="#" className={styles.link}>
+            <Link to="/Contact" className={styles.link}>
               <AiOutlineWhatsApp />
             </Link>
           </li>
           <li>
-            <Link to="#" className={styles.link}>
+            <a href="https://www.instagram.com/pamira.clinic/?hl=en" className={styles.link}>
               <AiFillInstagram />
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

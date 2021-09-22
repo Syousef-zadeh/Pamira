@@ -48,7 +48,14 @@ const ServicesCard = (props) => {
     } else {
       return (
         <Link to="/service/details/:id">
-          <Button className={styles.button}>More Details</Button>
+          <Button
+            className={styles.button}
+            onClick={() => {
+              history.push(`/service/details/${props.id}`);
+            }}
+          >
+            More Details
+          </Button>
         </Link>
       );
     }

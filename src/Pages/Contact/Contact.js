@@ -12,7 +12,7 @@ const Contact = () => {
       <div className={styles.content}>
         <p>Address: Tehran - 17 Shahrivar</p>
         <p>Phone: 021-33345247</p>
-        <p>Mobile: 09904800254</p>
+        <p>Whatsapp: 09904800254</p>
         <div className={styles.socialM}>
         <SocialMedia />
         </div>

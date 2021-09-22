@@ -16,7 +16,7 @@ const RowServices = (props) => {
   useEffect(() => {
     const fetchServices = () => {
       try {
-        fetch("http://localhost:5000/api/services/")
+        fetch("https://pamira-clinic.herokuapp.com/api/services/")
           .then((res) =>  res.json()
           )
           .then((data) => {
