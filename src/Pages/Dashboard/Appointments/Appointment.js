@@ -61,7 +61,7 @@ export default function Appointments() {
         </TableHead>
         <TableBody>
           {booking.map((row) => (
-            <StyledTableRow>
+            <StyledTableRow key={row.id}>
               <StyledTableCell component="th" scope="row">
                 {row.fullName}
               </StyledTableCell>

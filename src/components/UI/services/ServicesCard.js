@@ -3,7 +3,6 @@ import styles from "./ServicesCard.module.css";
 import Button from "../Button/button";
 import useToken from "../../useToken/useToken";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 const ServicesCard = (props) => {
@@ -47,7 +46,7 @@ const ServicesCard = (props) => {
       );
     } else {
       return (
-        <Link to="/service/details/:id">
+        
           <Button
             className={styles.button}
             onClick={() => {
@@ -56,7 +55,7 @@ const ServicesCard = (props) => {
           >
             More Details
           </Button>
-        </Link>
+      
       );
     }
   };
