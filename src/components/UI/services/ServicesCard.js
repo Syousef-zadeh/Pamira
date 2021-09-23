@@ -46,21 +46,25 @@ const ServicesCard = (props) => {
       );
     } else {
       return (
-        
-          <Button
-            className={styles.button}
-            onClick={() => {
-              history.push(`/service/details/${props.id}`);
-            }}
-          >
-            More Details
-          </Button>
-      
+        <Button
+          className={styles.button}
+          onClick={() => {
+            history.push(`/service/details/${props.id}`);
+          }}
+        >
+          More Details
+        </Button>
       );
     }
   };
   return (
-    <div className={styles.serviceCard} id={props.id}>
+    <div
+      className={styles.serviceCard}
+      id={props.id}
+      onClick={() => {
+        history.push(`/service/details/${props.id}`);
+      }}
+    >
       <div key={props.id} className={styles["body-serviceCard"]}>
         <img
           className={styles["img-card"]}

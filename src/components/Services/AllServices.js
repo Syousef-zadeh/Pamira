@@ -38,6 +38,7 @@ const Services = (props) => {
     console.log(service);
   }, []);
 
+  //long services
   const createContent = () => {
     if (error) {
       return <p>{error}</p>;
@@ -61,14 +62,14 @@ const Services = (props) => {
               description={item.serviceDescription}
               shortDes={item.serviceShortDes}
               titleButton="View Details"
-             // deleted={setDeleted}
+              // deleted={setDeleted}
             />
           </div>
         );
       });
-    }else {
-    return <p>Found no Data</p>;
-  }
+    } else {
+      return <p>Found no Data</p>;
+    }
   };
 
   const { token } = useToken();
@@ -82,10 +83,7 @@ const Services = (props) => {
         </div>
         <h2 className={styles.title}>Our Services</h2>
         <RowServices />
-        <div className={styles.imgCard}>
-          {createContent()}
- 
-        </div>
+        <div className={styles.imgCard}>{createContent()}</div>
       </div>
     );
   } else {
@@ -93,10 +91,7 @@ const Services = (props) => {
       <div className={styles.service}>
         <h2 className={styles.title}>Our Services</h2>
         <RowServices />
-        <div className={styles.imgCard}>
-          {createContent()}
-   
-        </div>
+        <div className={styles.imgCard}>{createContent()}</div>
       </div>
     );
   }
