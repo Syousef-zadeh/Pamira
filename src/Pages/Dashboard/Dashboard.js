@@ -13,8 +13,13 @@ const Dashboard = (props) => {
   const history = useHistory();
   const [fileName, setFileName] = useState("");
   const [serviceName, setServiceName] = useState("");
+  const [lgServiceName, setLgServiceName] = useState("");
+  const [lgServiceDescription, setLgServiceDescription] = useState("");
   const [serviceDescription, setServiceDescription] = useState("");
   const [serviceShortDes, setServiceShortDes] = useState("");
+  const [successfull1, setSuccessfull1] = useState("");
+  const [successfull2, setSuccessfull2] = useState("");
+
 
   const [file, setFile] = useState("");
   const [loading, setLoading] = useState(false);
@@ -83,13 +88,14 @@ const Dashboard = (props) => {
         },
         config
       );
-
+      setSuccessfull1("Service Added!");
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
       setError(error.response.data.message);
       setLoading(false);
     }
+
   };
 
   //Large services
@@ -108,13 +114,13 @@ const Dashboard = (props) => {
         {
           file,
           fileName,
-          serviceName,
-          serviceDescription,
+          lgServiceName,
+          lgServiceDescription,
           serviceShortDes,
         },
         config
       );
-
+      setSuccessfull2("Service Added!");
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
@@ -142,6 +148,7 @@ const Dashboard = (props) => {
       <div className={styles.upload}>
         <h5>Add a Service</h5>
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {successfull1 && <ErrorMessage variant="success">{successfull1}</ErrorMessage>}
         {loading && <Loading />}
         <Input
           placeholder="Service Title"
@@ -180,12 +187,13 @@ const Dashboard = (props) => {
       <div className={styles.upload}>
         <h5>Add a Larg Service</h5>
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {successfull2 && <ErrorMessage variant="success">{successfull2}</ErrorMessage>}
         {loading && <Loading />}
         <Input
-          placeholder="Service Title"
+          placeholder="Service name"
           type="text"
-          value={serviceName}
-          onChange={(e) => setServiceName(e.target.value)}
+          value={lgServiceName}
+          onChange={(e) => setLgServiceName(e.target.value)}
         />
         <Input
           placeholder="Brief Description"
@@ -196,8 +204,8 @@ const Dashboard = (props) => {
         <textarea
           placeholder="Service Description"
           type="text"
-          value={serviceDescription}
-          onChange={(e) => setServiceDescription(e.target.value)}
+          value={lgServiceDescription}
+          onChange={(e) => setLgServiceDescription(e.target.value)}
         />
         <Input
           placeholder="Photo"
