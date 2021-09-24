@@ -29,6 +29,7 @@ const Input = React.forwardRef((props, ref) => {
         minLength="5"
         name={props.name}
         onChange={props.onChange}
+        required
       />
     </div>
   );

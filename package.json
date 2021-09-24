@@ -21,6 +21,7 @@
     "express-session": "^1.17.2",
     "google-map-react": "^2.1.10",
     "heroku": "^7.57.0",
+    "mdbreact": "^5.1.0",
     "mongoose": "^6.0.1",
     "proxy": "^1.0.2",
     "react": "^17.0.1",
