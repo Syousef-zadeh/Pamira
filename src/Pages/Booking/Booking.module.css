@@ -1,5 +1,5 @@
 .booking{
-    margin:2% 23% 5% 23%;
+    margin:4% 23% 5% 23%;
     padding: 1rem;
     box-shadow:0 0 20px 2px #00142f;
     border-radius: 10px;
@@ -38,8 +38,9 @@ textarea {
     z-index: 10;
 }
 .inputApp{
-    display: flex;
-    flex-direction: inherit;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* flex-direction: inherit; */
     column-gap: .25rem;
 }
 
@@ -49,7 +50,7 @@ textarea {
         flex-direction: column-reverse;
     }
     .booking{
-        margin: 2% 10% 5% 10%;
+        margin: 12% 10% 5% 10%;
     }
     .contact{
         margin-left: 0;
@@ -57,5 +58,9 @@ textarea {
     .booking-h2{
         margin: 5% 11% 5% 14%;
         font-size: 24px
+    }
+    .inputApp{
+        display: grid;
+        grid-template-columns: 1;
     }
 }
