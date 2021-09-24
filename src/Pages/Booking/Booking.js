@@ -16,6 +16,7 @@ const Booking = () => {
   const [comments, setComments] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState("");
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -36,41 +37,44 @@ const Booking = () => {
           comments,
         },
         config
-        );
-        console.log(data);
-        localStorage.setItem("userInfo", JSON.stringify(data));
+      );
+      console.log(data);
+      localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
       setError(error.response.data.message);
       setLoading(false);
     }
+    console.log(error);
+    setSuccess("Successfully booked your appointment!");
   };
 
   return (
     <section className={styles.sectionForm}>
-      <div className={styles.errors}>
-        {error && <ErrorMessage  variant="danger">{error}</ErrorMessage>}
-        {loading && <Loading />}
-      </div>
+      <div className={styles.errors}>{loading && <Loading />}</div>
       <h2 className={styles["booking-h2"]}>Booking an Appointment</h2>
       <form>
         <div className={styles.booking}>
+          {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+          {success && <ErrorMessage variant="success">{success}</ErrorMessage>}
           <div className={styles.mobile}>
             <div>
-              <Input
-                placeholder="Full Name*"
-                id="fullName"
-                type="text"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-              />
-              <Input
-                placeholder="Phone Number*"
-                id="phoneNumber"
-                type="tel"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-              />
+              <div className={styles.inputApp}>
+                <Input
+                  placeholder="Full Name*"
+                  id="fullName"
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
+                <Input
+                  placeholder="Phone Number*"
+                  id="phoneNumber"
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                />
+              </div>
               <Input
                 placeholder="Procedure*"
                 id="procedure"

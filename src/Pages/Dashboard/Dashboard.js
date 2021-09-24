@@ -20,7 +20,6 @@ const Dashboard = (props) => {
   const [successfull1, setSuccessfull1] = useState("");
   const [successfull2, setSuccessfull2] = useState("");
 
-
   const [file, setFile] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -95,7 +94,7 @@ const Dashboard = (props) => {
       setError(error.response.data.message);
       setLoading(false);
     }
-
+    console.log(error);
   };
 
   //Large services
@@ -148,7 +147,9 @@ const Dashboard = (props) => {
       <div className={styles.upload}>
         <h5>Add a Service</h5>
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
-        {successfull1 && <ErrorMessage variant="success">{successfull1}</ErrorMessage>}
+        {successfull1 && (
+          <ErrorMessage variant="success">{successfull1}</ErrorMessage>
+        )}
         {loading && <Loading />}
         <Input
           placeholder="Service Title"
@@ -187,7 +188,9 @@ const Dashboard = (props) => {
       <div className={styles.upload}>
         <h5>Add a Larg Service</h5>
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
-        {successfull2 && <ErrorMessage variant="success">{successfull2}</ErrorMessage>}
+        {successfull2 && (
+          <ErrorMessage variant="success">{successfull2}</ErrorMessage>
+        )}
         {loading && <Loading />}
         <Input
           placeholder="Service name"
