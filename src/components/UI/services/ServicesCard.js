@@ -28,7 +28,7 @@ const ServicesCard = (props) => {
       return (
         <div className={styles.adminBtn}>
           <Button
-            className={styles.button}
+            //className={styles.button}
             onClick={() => {
               history.push(`/service/details/${props.id}`);
             }}
@@ -47,7 +47,7 @@ const ServicesCard = (props) => {
     } else {
       return (
         <Button
-          className={styles.button}
+          //className={styles.button}
           onClick={() => {
             history.push(`/service/details/${props.id}`);
           }}
