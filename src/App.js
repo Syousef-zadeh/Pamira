@@ -19,7 +19,7 @@ function App() {
       <Header />
       <main>
         <Switch>
-          <Route path="/Contact" component={Contact} />
+          <Route path="/contact" component={Contact} />
           <Route path="/Mbi-calculate" component={Mbi} />
           <Route path="/book-appointment" component={Booking} />
           <Route

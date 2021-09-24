@@ -52,7 +52,7 @@ const Booking = () => {
   return (
     <section className={styles.sectionForm}>
       <div className={styles.errors}>{loading && <Loading />}</div>
-      <h2 className={styles["booking-h2"]}>Booking an Appointment</h2>
+      {/* <h2 className={styles["booking-h2"]}>Booking an Appointment</h2> */}
       <form>
         <div className={styles.booking}>
           {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}

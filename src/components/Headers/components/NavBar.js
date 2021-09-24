@@ -13,9 +13,9 @@ const NavBar = () => {
           <Navbar.Collapse id="basic-navbar-nav" style={{direction: "rtl"}}>
         <div>
             <Nav className="me-auto" style={{ columnGap:"1rem"}}>
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#link">Gallery</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Services</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -28,6 +28,7 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link  href="/contact">Contact</Nav.Link>
               <Nav.Link href="#link">About</Nav.Link>
             </Nav>
         </div>
