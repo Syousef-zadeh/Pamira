@@ -15,9 +15,9 @@ const TopHeader = (props) => {
         <span className={styles.address}>Pamira.clinic</span>
       </div>
 
-      <div className={styles.btn}>
+      {/* <div className={styles.btn}>
         <AppointmentButton />
-      </div>
+      </div> */}
     </div>
   );
 };

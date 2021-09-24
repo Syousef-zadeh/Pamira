@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Headers/Header";
 import Contact from "./Pages/Contact/Contact";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./Pages/Home/Home";
 import Mbi from "./Pages/MBI/Mbi";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
@@ -10,7 +11,6 @@ import Booking from "./Pages/Booking/Booking";
 import Login from "./Pages/Login/login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import useToken from "./components/useToken/useToken";
-
 function App() {
 
   const { setToken, token } = useToken();
