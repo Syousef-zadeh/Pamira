@@ -28,7 +28,7 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link  href="Contact/">Contact</Nav.Link>
+              <Nav.Link  href="/contact">Contact</Nav.Link>
               <Nav.Link href="#link">About</Nav.Link>
             </Nav>
         </div>
