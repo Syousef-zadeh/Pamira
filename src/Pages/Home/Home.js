@@ -10,6 +10,7 @@ import Services from "../../components/Services/AllServices";
 import Schedule from "../../components/Schedule/Schedule";
 import MBIbtn from "../../components/MBI/MbiButton";
 import BookAppointment from "../../components/Headers/components/AppointmentButton";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 const Home = () => {
   return (
@@ -51,6 +52,7 @@ const Home = () => {
           }}
         />
       </div>
+      <VideoPlayer />
       <Services />
       <MBIbtn />
       <Schedule />
