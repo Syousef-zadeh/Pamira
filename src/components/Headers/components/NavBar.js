@@ -32,8 +32,7 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link onClick={()=>history.push("/contact")}>Contacts</Nav.Link>
+              <Nav.Link onClick={()=>history.push("/contact")}>Contact</Nav.Link>
 
               <Nav.Link href="#link">About</Nav.Link>
             </Nav>
