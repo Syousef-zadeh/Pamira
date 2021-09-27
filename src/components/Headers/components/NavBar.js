@@ -18,7 +18,6 @@ const NavBar = () => {
             <Nav className="me-auto" style={{ columnGap:"1rem"}}>
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#link">Gallery</Nav.Link>
-              {/* <Link to="/Contact" style={{color:"black"}}>Contact</Link> */}
               <NavDropdown title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Services</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
