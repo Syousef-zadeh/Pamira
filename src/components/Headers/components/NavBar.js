@@ -31,8 +31,12 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
+<<<<<<< HEAD
               <Nav.Link onClick={()=>history.push("/contact")}>Contact</Nav.Link>
 
+=======
+              <Nav.Link  href="Contact/">Contact</Nav.Link>
+>>>>>>> d29f434 (get large services)
               <Nav.Link href="#link">About</Nav.Link>
             </Nav>
         </div>
