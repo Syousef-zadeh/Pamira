@@ -2,3 +2,14 @@
     text-align: -webkit-center;
     margin-top: 2rem;
 }
+
+.mediaplayer{
+    width: 60%;
+}
+
+@media only screen and (max-width: 860px){
+    .mediaplayer{
+        width: 340px !important;
+        height: 240px !important;
+    }
+  }

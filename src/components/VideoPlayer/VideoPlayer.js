@@ -8,7 +8,10 @@ const VideoPlayer = () => {
     <div>
       <div className={styles.videoplayer}>
         <ReactPlayer
+          className={styles.mediaplayer}
           controls
+
+
           url="https://www.youtube.com/watch?app=desktop&v=kRime9FkPpc"
         />
       </div>
