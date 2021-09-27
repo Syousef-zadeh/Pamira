@@ -2,8 +2,11 @@ import React from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import styles from "./NavBar.module.css";
 import logo from "../../../assets/pamira.png";
+import { useHistory } from "react-router-dom";
 
 const NavBar = () => {
+  const history = useHistory();
+
   return (
     <div>
       <Navbar bg="light" expand="lg" style={{padding:"0 10%"}}>
@@ -15,6 +18,7 @@ const NavBar = () => {
             <Nav className="me-auto" style={{ columnGap:"1rem"}}>
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#link">Gallery</Nav.Link>
+              {/* <Link to="/Contact" style={{color:"black"}}>Contact</Link> */}
               <NavDropdown title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Services</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -28,7 +32,9 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link  href="/contact">Contact</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link onClick={()=>history.push("/contact")}>Contacts</Nav.Link>
+
               <Nav.Link href="#link">About</Nav.Link>
             </Nav>
         </div>
