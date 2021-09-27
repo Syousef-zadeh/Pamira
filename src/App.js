@@ -11,8 +11,11 @@ import Booking from "./Pages/Booking/Booking";
 import Login from "./Pages/Login/login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import useToken from "./components/useToken/useToken";
-function App() {
+import { useHistory } from "react-router-dom";
 
+
+function App() {
+  const history = useHistory();
   const { setToken, token } = useToken();
   return (
     <BrowserRouter>
@@ -22,8 +25,7 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/Mbi-calculate" component={Mbi} />
           <Route path="/book-appointment" component={Booking} />
-          <Route
-            path="/dashboard"
+          <Route onClick={()=>history.push("/dashboard")}
             component={() =>
               token && token.length > 1 ? (
                 <Dashboard setToken={setToken} />

@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import styles from "./NavBar.module.css";
 import logo from "../../../assets/pamira.png";
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 const NavBar = () => {
