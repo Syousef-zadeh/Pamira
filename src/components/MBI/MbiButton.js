@@ -15,7 +15,7 @@ const MbiBtn = () => {
             color: "white",
           }}
         >
-          Calculate Your MBI
+          Calculate Your BMI
         </Button>
       </Link>
     </div>
