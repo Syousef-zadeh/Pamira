@@ -51,18 +51,27 @@ const Footer = () => {
 
 
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>توضیحات</Box>
-              {/* <Box pt={{ xs: 1, sm: 2 }}>
+              <Box borderBottom={1}>دسترسی آسان</Box>
+              <Box pt={{ xs: 1, sm: 2 }}>
                 <Link to="/" color="inherit">
-                  Login
+                  صفحه اصلی
                 </Link>
               </Box>
               <Box>
                 <Link to="/" color="inherit">
-                  register
+                  نمونه کار
                 </Link>
-              </Box> */}
-
+              </Box>
+              <Box >
+                <Link to="/" color="inherit">
+                  تماس با ما
+                </Link>
+              </Box>
+              <Box >
+                <Link to="/" color="inherit">
+                  درباره ما
+                </Link>
+              </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box borderBottom={1}>اطلاعات تماس</Box>
@@ -97,7 +106,7 @@ const Footer = () => {
         bgcolor="#001735"
         color="#adbed2"
       >
-        © {new Date().getFullYear()} Pamira Clinic. All rights reserved.
+         کلیه حقوق این وب‌سایت برای گروه کلینیک‌های زیبایی پامیرا محفوظ است.  © {new Date().getFullYear()}
       </Box>
     </footer>
   );
