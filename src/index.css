@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  font-family: B-Nazanin
+
 }
 
 html {
@@ -12,6 +14,7 @@ html {
 body {
   margin: 0;
   background-color:white;
+  font-family: B-Nazanin
 }
 
 .MuiLink-underlineHover:hover{
@@ -27,3 +30,7 @@ body {
 
 }
 
+@font-face {
+  font-family: 'BNazanin';
+  src: local('BNazanin'), url(./fonts/BNazanin.ttf) format('truetype');
+}
