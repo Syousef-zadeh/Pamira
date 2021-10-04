@@ -33,7 +33,7 @@ const ServicesCard = (props) => {
               history.push(`/service/details/${props.id}`);
             }}
           >
-            More Details
+            اطلاعات بیشتر
           </Button>
           <Button>Edit</Button>
           <Button
@@ -52,7 +52,7 @@ const ServicesCard = (props) => {
             history.push(`/service/details/${props.id}`);
           }}
         >
-          More Details
+          اطلاعات بیشتر
         </Button>
       );
     }

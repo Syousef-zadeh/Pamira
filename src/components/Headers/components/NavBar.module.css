@@ -7,7 +7,15 @@
   box-shadow: 0 2px 8px #283b42;
 }
 .navbar {
-  color: #283b42;
+  color: black;
+  font-family: B-Nazanin;
+
+}
+.headerFont{
+  font-family: B-Nazanin;
+  color: black;
+  font-size: larger;
+  
 }
 .nav ul {
   color: black;
@@ -125,3 +133,4 @@
   width: 80px;
   padding: .5rem;
 } */
+

@@ -13,6 +13,8 @@
 
 .title {
   width: 100%;
+  font-size: 45px;
+  font-weight: bold;
   padding: 2.5rem 0 1rem 0;
   text-align: center;
 }

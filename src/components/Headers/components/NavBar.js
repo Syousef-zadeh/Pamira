@@ -14,26 +14,26 @@ const NavBar = () => {
         <img className={styles.ImgLogo} src={logo} alt="Pamira-logo" />
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" style={{direction: "rtl"}}>
-        <div>
+        <div className={styles.headerFont}>
             <Nav className="me-auto" style={{ columnGap:"1rem"}}>
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="#link">Gallery</Nav.Link>
-              <NavDropdown title="Services" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Services</NavDropdown.Item>
+              <Nav.Link href="/">خانه</Nav.Link>
+              <Nav.Link href="#link">نمونه کار</Nav.Link>
+              <NavDropdown title="خدمات" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">خدمات</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  Another action
+                  بوتاکس
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
-                  Something
+                  فیلر
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                  مزوتراپی
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link onClick={()=>history.push("/contact")}>Contact</Nav.Link>
+              <Nav.Link onClick={()=>history.push("/contact")}>تماس با ما</Nav.Link>
 
-              <Nav.Link href="#link">About</Nav.Link>
+              <Nav.Link href="#link">درباره ما</Nav.Link>
             </Nav>
         </div>
           </Navbar.Collapse>

@@ -61,7 +61,7 @@ const Services = (props) => {
               title={item.serviceName}
               description={item.serviceDescription}
               shortDes={item.serviceShortDes}
-              titleButton="View Details"
+              titleButton="اطلاعات بیشتر"
               // deleted={setDeleted}
             />
           </div>
@@ -81,7 +81,7 @@ const Services = (props) => {
             <Button style={{ backgroundColor: "green" }}>Add Service</Button>
           </Link>
         </div>
-        <h2 className={styles.title}>Our Services</h2>
+        <h2 className={styles.title}>خدمات</h2>
         <RowServices />
         <div className={styles.imgCard}>{createContent()}</div>
       </div>
@@ -89,7 +89,7 @@ const Services = (props) => {
   } else {
     return (
       <div className={styles.service}>
-        <h2 className={styles.title}>Our Services</h2>
+        <h2 className={styles.title}>خدمات </h2>
         <RowServices />
         <div className={styles.imgCard}>{createContent()}</div>
       </div>
