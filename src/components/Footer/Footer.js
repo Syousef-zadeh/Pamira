@@ -9,7 +9,7 @@ import Contact from "../Contact/Contact";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{direction:"rtl"}}>
       <Box
         px={{ xs: 8, sm: 15 }}
         py={{ xs: 8, sm: 10 }}
@@ -21,37 +21,52 @@ const Footer = () => {
         <Container maxWidth="lg">
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Service</Box>
+              <Box borderBottom={1}> خدمات پامیرا</Box>
               <Box pt={{ xs: 1, sm: 2 }}>
                 <Link to="/" color="inherit">
-                  Botox
+                  مراقبت های پوستی
                 </Link>
               </Box>
               <Box>
                 <Link to="/" color="inherit">
-                  mesotherapy
+                  مزوتراپی
                 </Link>
               </Box>
               <Box>
                 <Link to="/" color="inherit">
-                  Filler
+                  فیلر
                 </Link>
               </Box>
               <Box>
                 <Link to="/" color="inherit">
-                  Laser
+                  لیزر
                 </Link>
               </Box>
               <Box>
                 <Link to="/" color="inherit">
-                  Skin Care
+                  بوتاکس
                 </Link>
               </Box>
             </Grid>
 
+
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Help</Box>
-              <Box pt={{ xs: 1, sm: 2 }}>
+              <Box borderBottom={1}>توضیحات</Box>
+              {/* <Box pt={{ xs: 1, sm: 2 }}>
+                <Link to="/" color="inherit">
+                  Login
+                </Link>
+              </Box>
+              <Box>
+                <Link to="/" color="inherit">
+                  register
+                </Link>
+              </Box> */}
+
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Box borderBottom={1}>اطلاعات تماس</Box>
+              {/* <Box pt={{ xs: 1, sm: 2 }}>
                 <Link to="/" color="inherit">
                   Contact
                 </Link>
@@ -65,26 +80,14 @@ const Footer = () => {
                 <Link to="/" color="inherit">
                   Privacy
                 </Link>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Account</Box>
-              <Box pt={{ xs: 1, sm: 2 }}>
-                <Link to="/" color="inherit">
-                  Login
-                </Link>
-              </Box>
-              <Box>
-                <Link to="/" color="inherit">
-                  register
-                </Link>
-              </Box>
+              </Box> */}
               <Box style={{ display: "flex", flexDirection: "column" }}>
                 <Contact />
                 <SocialMedia />
               </Box>
             </Grid>
           </Grid>
+          
         </Container>
       </Box>
       <Box

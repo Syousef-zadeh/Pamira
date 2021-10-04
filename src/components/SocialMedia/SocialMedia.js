@@ -7,7 +7,7 @@ import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 
 const SocialMedia = () => {
   return (
-    <div>
+    
       <div className={styles.media}>
         <ul>
           <li>
@@ -27,7 +27,7 @@ const SocialMedia = () => {
           </li>
         </ul>
       </div>
-    </div>
+
   );
 };
 export default SocialMedia;
