@@ -7,8 +7,7 @@
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
-
+  font-family: B-Nazanin
 }
 
 body {
@@ -31,6 +30,14 @@ body {
 }
 
 @font-face {
-  font-family: 'BNazanin';
-  src: local('BNazanin'), url(./fonts/BNazanin.ttf) format('truetype');
+  font-family: 'B-Nazanin';
+  src: local('B-Nazanin'), url(./fonts/B-nazanin.ttf) format('truetype');
+}
+.navbar-nav .nav-link{
+  color: #00142f !important;
+}
+
+.navbar-nav .nav-link:hover{
+  background-color: #0d2b3f15 !important;
+  border-radius: 15px;
 }
