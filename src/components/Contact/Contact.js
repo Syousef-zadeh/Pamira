@@ -4,11 +4,13 @@ const Contact = () => {
   return (
     <div>
       <div style={{ paddingTop: "16px" }}>
-        Address: 17 shahrivar Av. Tehran
+        <p>
+          تهران - خیابان 17 شهریور - کوچه حاجیان فرد
+        </p>
       </div>
 
       <span>021-33345247</span>
     </div>
   );
-}
+};
 export default Contact;
