@@ -1,6 +1,9 @@
 .mbi{
     margin:4rem;
     text-align: center;
+    margin: 3% 10%;
+    font-size: large;
+    font-weight: 500;
 }
 
 .formMbi{

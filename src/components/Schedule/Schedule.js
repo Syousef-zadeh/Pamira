@@ -10,13 +10,13 @@ const Schedule = () => {
       <h2 className={styles.title}>Schedule</h2>
       <div className={styles["schedule-table"]}>
         <div className={styles.weekdays}>
-          <ScheduleTable day="Saturday" hour="Close" />
-          <ScheduleTable day="Sunday" hour="2pm - 6pm" />
-          <ScheduleTable day="Monday" hour="Close" />
-          <ScheduleTable day="Tuesday" hour="2pm - 6pm" />
-          <ScheduleTable day="Wednsday" hour="Close" />
-          <ScheduleTable day="Thursday" hour="2pm - 6pm" />
-          <ScheduleTable day="Friday" hour="Close" />
+          <ScheduleTable day="شنبه" hour="Close" />
+          <ScheduleTable day="یکشنبه" hour="2pm - 6pm" />
+          <ScheduleTable day="دوشنبه" hour="Close" />
+          <ScheduleTable day="سه شنبه" hour="2pm - 6pm" />
+          <ScheduleTable day="چهارشنبه" hour="Close" />
+          <ScheduleTable day="پنجشنبه" hour="2pm - 6pm" />
+          <ScheduleTable day="جمعه" hour="Close" />
         </div>
         <img
           className={styles["schedule-img"]}

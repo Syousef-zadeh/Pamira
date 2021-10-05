@@ -68,10 +68,10 @@ const MbiForm = (props) => {
             }}
             onClick={calculate}
           >
-            Calculate
+            BMI محاسبه
           </Button>
 
-          <div>{isNaN(bmi) ? null : <h3>Your BMI = {bmi}</h3>}</div>
+          <div>{isNaN(bmi) ? null : <h3>شما BMI = {bmi}</h3>}</div>
           <div>
             <h3>{bmiClass}</h3>
           </div>
