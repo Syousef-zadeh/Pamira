@@ -46,14 +46,14 @@ const MbiForm = (props) => {
     <div className={styles.mbiForm}>
       <form className={styles["form-input"]}>
         <Input
-          label="Height"
+          label="قد"
           type="number"
           value={height}
           placeholder="170 cm"
           onChange={handleHeightChange}
         />
         <Input
-          label="Weight"
+          label="وزن"
           type="number"
           value={weight}
           placeholder="80 kg"
