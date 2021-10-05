@@ -15,7 +15,7 @@ const MbiBtn = () => {
             color: "white",
           }}
         >
-          Calculate Your MBI
+           خود کلیک کنید BMI برای محاسبه
         </Button>
       </Link>
     </div>
