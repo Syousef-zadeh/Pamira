@@ -28,10 +28,10 @@
   /* transform: translateY(-2rem); */
   transform: scale(1.07);
 }
-/* .serviceCard:hover Button {
+.serviceCard:hover Button {
   background-color: #283b42;
   color: white;
-} */
+}
 
 .text-card {
   padding: 1rem 0;
