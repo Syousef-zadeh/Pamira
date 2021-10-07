@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 
 const Card = (props) => {
+
+  
   return (
     <div className={styles.card} id={props.id}>
       <div className={styles["card__body"]}>

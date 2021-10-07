@@ -9,6 +9,10 @@
     margin-bottom: 4rem;
 }
 
+.dash{
+    align-self: end;
+}
+
 .logout{
     display: flex;
     justify-content: space-between;

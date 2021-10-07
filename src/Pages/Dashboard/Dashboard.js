@@ -131,7 +131,7 @@ const Dashboard = (props) => {
   return (
     <div className={styles.dashboard}>
       <div className={styles.logout}>
-        <h2>Dashboard</h2>
+        <h2 className={styles.dash}>Dashboard</h2>
         <Button
           onClick={() => {
             localStorage.removeItem("userInfo");
