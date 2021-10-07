@@ -16,7 +16,7 @@ const Footer = () => {
         pb={{ xs: 0, sm: 1 }}
         marginTop={{ xs: 8, sm: 8 }}
         bgcolor="#00142f"
-        color="#adbed2"
+        color="white"
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
@@ -104,7 +104,8 @@ const Footer = () => {
         pt={{ xs: 1, sm: 2 }}
         pb={{ xs: 1, sm: 2 }}
         bgcolor="#001735"
-        color="#adbed2"
+        color="white"
+        // color="#adbed2"
       >
          کلیه حقوق این وب‌ سایت برای کلینیک‌ زیبایی پامیرا محفوظ است.  © {new Date().getFullYear()}
       </Box>
