@@ -1,0 +1,21 @@
+.line{
+    height: 1px;
+    width: 100%;
+
+}
+
+.days{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    justify-items: center;
+}
+.hour{
+    float: left;
+}
+.day{float: right;}
+
+.hour ,.day{
+    display: inline-block;
+    border-bottom: 1px solid white;
+    
+}

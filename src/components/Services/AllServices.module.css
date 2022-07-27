@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+.service{
+  margin-bottom: 4rem;
+}
+.imgCard {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 2% 8%;
+  gap: 1rem;
+}
+
+.title {
+  width: 100%;
+  font-size: 45px;
+  font-weight: bold;
+  padding: 2.5rem 0 1rem 0;
+  text-align: center;
+}
+.addService{
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: row-reverse;
+  margin-right: 10%;
+}
+@media only screen and (max-width: 650px) {
+  .imgCard {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    row-gap: 2rem;
+  }
+}

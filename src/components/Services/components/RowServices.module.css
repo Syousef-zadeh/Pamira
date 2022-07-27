@@ -1,0 +1,16 @@
+.row-services{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .row-services{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      row-gap: 2rem;
+      padding-bottom: 2rem;
+      margin: 20px
+    }
+  }

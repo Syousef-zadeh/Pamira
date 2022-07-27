@@ -1,0 +1,64 @@
+{
+  "name": "react-complete-guide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.12.3",
+    "@mui/material": "^5.0.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.0",
+    "compress-base64": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "google-map-react": "^2.1.10",
+    "heroku": "^7.57.0",
+    "mdbreact": "^5.1.0",
+    "mongoose": "^6.0.1",
+    "proxy": "^1.0.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^2.0.0-beta.4",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
+    "react-image-file-resizer": "^0.4.7",
+    "react-instagram-embed": "^3.0.0",
+    "react-player": "^2.9.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "styled-components": "^5.3.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

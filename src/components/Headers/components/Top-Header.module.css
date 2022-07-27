@@ -1,0 +1,40 @@
+.headersTop {
+  justify-content: space-between;
+}
+.topHeader {
+  padding: 0.25% 10%;
+  background-color: #00142f;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.info {
+  display: flex;
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons {
+  display: flex;
+  align-self: center;
+}
+.info span {
+    padding: 0 10px;
+  }
+
+@media only screen and (max-width: 650px) {
+  .icons {
+    width: 4%;
+    height: 4%;
+
+  }
+  .btn {
+    display: none;
+  }
+
+}

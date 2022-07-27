@@ -1,0 +1,43 @@
+.serviceCard {
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #283b42;
+  padding: 1rem;
+  background-color: white;
+  height: 100%;
+  object-fit: contain;
+  text-align: center;
+  transition: transform 200ms ease-in;
+}
+
+.body-serviceCard {
+  height: 100%;
+}
+
+.img-card {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.serviceCard:hover {
+  /* transform: translateY(-2rem); */
+  transform: scale(1.07);
+}
+.serviceCard:hover Button {
+  background-color: #283b42;
+  color: white;
+}
+
+.text-card {
+  padding: 1rem 0;
+}
+
+.adminBtn {
+  display: flex;
+  flex-direction: column;
+}

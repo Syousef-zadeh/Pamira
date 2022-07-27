@@ -1,0 +1,24 @@
+.dashboard{
+    margin: 8% 20%;
+}
+
+.upload{
+    box-shadow: 0 0 18px 4px rgba(0, 0, 0, .2);
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+}
+
+.dash{
+    align-self: end;
+}
+
+.logout{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0;
+}
+
+.sbmBtn{
+    text-align: center;
+}

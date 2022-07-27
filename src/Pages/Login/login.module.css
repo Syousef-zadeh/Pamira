@@ -1,0 +1,19 @@
+.login-form{
+    margin: 10% 30%;
+}
+
+.login-border{
+    box-shadow: 0 0 18px 4px rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+.btn{
+    text-align: center;
+}
+
+@media only screen and (max-width: 860px){
+    .login-form{
+        margin: 10% 16%;
+    }
+}

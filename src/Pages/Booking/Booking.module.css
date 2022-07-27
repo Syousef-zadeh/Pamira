@@ -1,0 +1,66 @@
+.booking{
+    margin:4% 23% 5% 23%;
+    padding: 1rem;
+    box-shadow:0 0 20px 2px #00142f;
+    border-radius: 10px;
+}
+
+.mobile{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.contact{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 0 1rem 0 2rem;
+    /* background-color: #023459; */
+    background-image: url("/src/assets/Background/mbi.jpg");
+    color: white;
+    
+}
+
+
+textarea {
+    width: 100%;
+    height: 150px;
+  }
+.booking-h2{
+    margin: 5% 23% 0 23%;
+}
+
+.sectionForm{
+    position: relative;
+}
+.errors{
+    position: relative;
+    z-index: 10;
+}
+.inputApp{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* flex-direction: inherit; */
+    column-gap: .25rem;
+}
+
+@media only screen and (max-width: 860px){
+    .mobile{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .booking{
+        margin: 12% 10% 5% 10%;
+    }
+    .contact{
+        margin-left: 0;
+    }
+    .booking-h2{
+        margin: 5% 11% 5% 14%;
+        font-size: 24px
+    }
+    .inputApp{
+        display: grid;
+        grid-template-columns: 1;
+    }
+}
