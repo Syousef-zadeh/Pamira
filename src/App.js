@@ -35,6 +35,7 @@ function App() {
               )
             }
           />
+          
           <Route exact path="/" component={Home} />
           <Route exact path="/service/details/:id" component={Service} />
         </Switch>
