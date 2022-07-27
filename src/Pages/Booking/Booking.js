@@ -28,7 +28,7 @@ const Booking = () => {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "https://pamira-clinic.herokuapp.com/api/booking/add",
+        "http://localhost:5000/api/booking/add",
         {
           fullName,
           phoneNumber,

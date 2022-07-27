@@ -1,7 +1,9 @@
 .homeCarousel{
-    margin:.25% 10%;
-    height: 80%;
+    margin:.25% 3%;
 }
+
+
+.carousel-inner .item{ width:640px; height:360px; }
 .appointment{
     display: none;
 }
@@ -14,3 +16,9 @@
 
     }
 }
+
+
+
+
+
+

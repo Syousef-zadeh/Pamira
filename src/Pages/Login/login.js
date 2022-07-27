@@ -23,7 +23,7 @@ const Login = (props) => {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "https://pamira-clinic.herokuapp.com/api/users/login",
+        "http://localhost:5000/api/users/login",
         {
           username,
           password,

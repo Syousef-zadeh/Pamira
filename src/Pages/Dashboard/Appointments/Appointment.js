@@ -34,7 +34,7 @@ export default function Appointments() {
   useEffect(() => {
     const fetchBooking = () => {
       try {
-        fetch("https://pamira-clinic.herokuapp.com/api/booking/")
+        fetch("http://localhost:5000/api/booking/")
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

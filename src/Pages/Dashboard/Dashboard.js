@@ -78,7 +78,7 @@ const Dashboard = (props) => {
 
       setLoading(true);
       const { data } = await axios.post(
-        "https://pamira-clinic.herokuapp.com/api/services/add",
+        "http://localhost:5000/api/services/add",
         {
           file,
           fileName,

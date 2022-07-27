@@ -3,3 +3,4 @@ config/keys.env
 .DS_Store
 src/.DS_Store
 /.eslintcache/
+.eslintcache
