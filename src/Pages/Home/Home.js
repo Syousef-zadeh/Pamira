@@ -10,12 +10,16 @@ import Schedule from "../../components/Schedule/Schedule";
 import MBIbtn from "../../components/MBI/MbiButton";
 import BookAppointment from "../../components/Headers/components/AppointmentButton";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+// import  Carousels  from "../../components/Carousel/Carousels";
 
 const Home = () => {
   
   return (
     <div>
       <div>
+
+        {/* <Carousels /> */}
+
         <Carousel variant="dark" className={styles.homeCarousel}>
           <Carousel.Item>
             <img className="d-block w-100 c-img" src={img2} alt="First slide" />

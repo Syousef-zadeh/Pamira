@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
-* {
-  box-sizing: border-box;
-  font-family: B-Nazanin
-
+@font-face {
+  font-family: 'B-Nazanin';
+  src: local('B-Nazanin'), url(./fonts/B-Nazanin.ttf) format('truetype');
 }
 
-html {
-  font-family: B-Nazanin
+html{
+  font-family: B-Nazanin;
 }
-
 body {
   margin: 0;
+  font-family: B-Nazanin;
+
   background-color:white;
-  font-family: B-Nazanin
+  font-family: B-Nazanin;
 }
 
 .MuiLink-underlineHover:hover{
@@ -31,7 +31,7 @@ body {
 
 @font-face {
   font-family: 'B-Nazanin';
-  src: local('B-Nazanin'), url(./fonts/B-nazanin.ttf) format('truetype');
+  src: local('B-Nazanin'), url(./fonts/B-Nazanin.ttf) format('truetype');
 }
 .navbar-nav .nav-link{
   color: #00142f !important;
