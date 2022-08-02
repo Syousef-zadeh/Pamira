@@ -110,7 +110,7 @@ const Dashboard = (props) => {
 
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/service/pamira/add",
+        "http://api.pamira-clinic.ir/api/service/pamira/add",
         {
           file,
           fileName,
