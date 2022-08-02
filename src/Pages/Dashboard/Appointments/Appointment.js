@@ -34,7 +34,7 @@ export default function Appointments() {
   useEffect(() => {
     const fetchBooking = () => {
       try {
-        fetch("http://localhost:5000/api/booking/")
+        fetch("http://api.pamira-clinic.ir/api/booking/")
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

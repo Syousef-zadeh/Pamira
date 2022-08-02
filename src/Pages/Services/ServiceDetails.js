@@ -14,7 +14,7 @@ const Service = (props) => {
   useEffect(() => {
     const fetchServices = () => {
       try {
-        fetch(`http://localhost:5000/api/services/details/${params.id}`).then(
+        fetch(`http://api.pamira-clinic.ir/api/services/details/${params.id}`).then(
           (res) => res.json()
         ).then((data) => {
           setService(data);
