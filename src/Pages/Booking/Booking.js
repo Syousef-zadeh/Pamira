@@ -28,7 +28,7 @@ const Booking = () => {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/booking/add",
+        "http://api.pamira-clinic.ir/api/booking/add",
         {
           fullName,
           phoneNumber,
