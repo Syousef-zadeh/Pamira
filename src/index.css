@@ -5,7 +5,7 @@
   src: local('B-Nazanin'), url(./fonts/B-Nazanin.ttf) format('truetype');
 }
 
-html{
+*{
   font-family: B-Nazanin;
 }
 body {

@@ -16,7 +16,7 @@ const RowServices = (props) => {
   useEffect(() => {
     const fetchServices = () => {
       try {
-        fetch("http://localhost:5000/api/services/")
+        fetch("http://api.pamira-clinic.ir/api/services/")
           .then((res) =>  res.json()
           )
           .then((data) => {
