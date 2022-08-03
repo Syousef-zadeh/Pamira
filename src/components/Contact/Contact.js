@@ -11,7 +11,7 @@ const Contact = () => {
 
       <span>021-33345247 : تلفن</span>
       <div>09904800254  : واتساپ</div>
-      <div><a a href="https://t.me/pamira_podcast">pamira_podcast</a>  : تلگرام </div>
+      <div><a href="https://t.me/pamira_podcast">pamira_podcast</a>  : تلگرام </div>
 
     </div>
   );

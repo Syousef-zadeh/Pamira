@@ -12,7 +12,7 @@ const TopHeader = (props) => {
         <span>021-33345247</span>
         
         <AiFillInstagram className={styles.icons} />
-        <span className={styles.address}>Pamira.clinic</span>
+        <a href="https://t.me/pamira_podcast"><span className={styles.address}>Pamira.clinic</span></a> 
       </div>
 
       <div className={styles.btn}>
