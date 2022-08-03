@@ -17,7 +17,6 @@ const NavBar = () => {
         <div className={styles.headerFont}>
             <Nav className="me-auto" style={{ columnGap:"1rem"}}>
               <Nav.Link href="/">خانه</Nav.Link>
-              <Nav.Link href="#link">نمونه کار</Nav.Link>
               <NavDropdown title="خدمات" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">خدمات</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -31,9 +30,11 @@ const NavBar = () => {
                   مزوتراپی
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link onClick={()=>history.push("/contact")}>تماس با ما</Nav.Link>
+              <Nav.Link href="#link">پرسش و پاسخ</Nav.Link>
+              <Nav.Link href="#link">لیست قیمت</Nav.Link>
+              <Nav.Link href="#link">معرفی کلینیک</Nav.Link>
+              <Nav.Link onClick={()=>history.push("/contact")}>تماس با کلینیک</Nav.Link>
 
-              <Nav.Link href="#link">درباره ما</Nav.Link>
             </Nav>
         </div>
           </Navbar.Collapse>
