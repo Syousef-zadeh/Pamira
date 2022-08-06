@@ -1,3 +1,74 @@
+.headersTop {
+  justify-content: space-between;
+}
+.topHeader {
+  /* margin: 2rem 4rem; */
+  /* border-radius: 40%; */
+
+  padding: 0.25% 10%;
+  background-color: #00142f;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.info {
+  display: flex;
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons {
+  display: flex;
+  align-self: center;
+}
+.info span {
+    padding: 0 10px;
+  }
+
+@media only screen and (max-width: 650px) {
+  .icons {
+    width: 4%;
+    height: 4%;
+
+  }
+  .btn {
+    display: none;
+  }
+
+}
+
+
+
+.button{
+  display: flex;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: rgb(1, 24, 22);
+  padding: 4px 10px;
+  border: 2px solid white;
+  border-radius: 30px;
+  border-color: white;
+  font-weight: bold;
+  align-self: center;
+}
+.button:hover,
+.button:active {
+background-color:#00142f;
+color:white;
+}
+
+a{
+text-decoration: none;
+}
+
+
+
+
 .nav {
   display: grid;
   grid-template-columns: 30% 70%;

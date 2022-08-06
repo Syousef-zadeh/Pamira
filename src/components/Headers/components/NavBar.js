@@ -3,40 +3,55 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import styles from "./NavBar.module.css";
 import logo from "../../../assets/pamira.png";
 import { useHistory } from "react-router-dom";
+import AppointmentButton from "./AppointmentButton";
+import { BiPhoneCall } from "react-icons/bi";
+import { AiFillInstagram } from "react-icons/ai";
 
 const NavBar = () => {
   const history = useHistory();
 
   return (
     <div>
-      <Navbar bg="light" expand="lg" style={{padding:"0 10%"}}>
-        <Container>
-        <img className={styles.ImgLogo} src={logo} alt="Pamira-logo" />
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" style={{direction: "rtl"}}>
-        <div className={styles.headerFont}>
-            <Nav className="me-auto" style={{ columnGap:"1rem"}}>
-              <Nav.Link href="/">خانه</Nav.Link>
-              <NavDropdown title="خدمات" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">خدمات</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  بوتاکس
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  فیلر
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  مزوتراپی
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#link">پرسش و پاسخ</Nav.Link>
-              <Nav.Link href="#link">لیست قیمت</Nav.Link>
-              <Nav.Link href="#link">معرفی کلینیک</Nav.Link>
-              <Nav.Link onClick={()=>history.push("/contact")}>تماس با کلینیک</Nav.Link>
+      <div className={styles.topHeader}>
+        <div className={styles.info}>
+          <BiPhoneCall className={styles.icons} />
+          <span>021-33345247</span>
 
-            </Nav>
+          <AiFillInstagram className={styles.icons} />
+          <a href="https://t.me/pamira_podcast">
+            <span className={styles.address}>Pamira.clinic</span>
+          </a>
         </div>
+
+        <div className={styles.btn}>
+          <AppointmentButton />
+        </div>
+      </div>
+      <Navbar bg="light" expand="lg" style={{ padding: "0 10%" }}>
+        <Container>
+          <img className={styles.ImgLogo} src={logo} alt="Pamira-logo" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" style={{ direction: "rtl" }}>
+            <div className={styles.headerFont}>
+              <Nav className="me-auto" style={{ columnGap: "1rem" }}>
+                <Nav.Link href="/">خانه</Nav.Link>
+                <NavDropdown title="خدمات" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">خدمات</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">بوتاکس</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">فیلر</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    مزوتراپی
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link href="#link">پرسش و پاسخ</Nav.Link>
+                <Nav.Link href="#link">لیست قیمت</Nav.Link>
+                <Nav.Link href="#link">معرفی کلینیک</Nav.Link>
+                <Nav.Link onClick={() => history.push("/contact")}>
+                  تماس با کلینیک
+                </Nav.Link>
+              </Nav>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

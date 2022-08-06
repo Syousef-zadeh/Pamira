@@ -36,7 +36,7 @@ const Services = (props) => {
     fetchServices();
     console.log("service");
     console.log(service);
-  }, [service]);
+  }, []);
   //[]
 
   //long services
